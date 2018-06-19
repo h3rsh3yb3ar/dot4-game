@@ -1,0 +1,8 @@
+tor_2.01
+{
+	material materials/overviews/tor_2.01.vmat
+	pos_x -9728
+	pos_y 9728
+	scale 19.000
+}
+

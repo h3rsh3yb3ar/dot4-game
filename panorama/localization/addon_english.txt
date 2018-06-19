@@ -1,0 +1,18 @@
+"addon"
+{
+	"Unassigned"      								"Unassigned Team"
+	"Spectator"       								"Spectator Team"
+	"Neutrals"        								"Neutral Team"
+	"NoTeam"          								"No Team"
+
+	"DOTA_Custom1"    								"Motis"
+	"DOTA_Custom2"    								"Tempest"
+	"DOTA_Custom3"    								"Radiant"
+	"DOTA_Custom4"    								"Dire"
+	"DOTA_Custom5"    								"Brown Rat"
+	"DOTA_Custom6"    								"Cyan Boar"
+	"DOTA_Custom7"    								"Olive Snake"
+	"DOTA_Custom8"    								"Purple Horse"
+	
+	"addonname"										"Trials of Retribution"
+}

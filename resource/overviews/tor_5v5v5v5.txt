@@ -1,0 +1,8 @@
+tor_5v5v5v5
+{
+	material materials/overviews/tor_5v5v5v5.vmat
+	pos_x -9728
+	pos_y 9728
+	scale 19.000
+}
+

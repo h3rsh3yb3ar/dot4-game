@@ -1,0 +1,41 @@
+"DOTAHeroes"
+{
+        "npc_dota_hero_silencer_tor"
+  {
+    "AbilityLayout"     "4"
+    "override_hero"     "npc_dota_hero_silencer"
+    "SoundSet"          "0" 
+    "Ability2"        "silencer_glaives_of_wisdom_datadriven" 
+    }
+	        "npc_dota_hero_alchemist_tor"
+  {
+    "AbilityLayout"     "4"
+    "override_hero"     "npc_dota_hero_alchemist"
+    "SoundSet"          "0" 
+    "Ability3"        "goblins_greed_datadriven" 
+    }
+		"npc_dota_hero_axe_tor"
+	{
+	 "AbilityLayout" "4"
+	 "override_hero"	"npc_dota_hero_axe"
+	 "soundset"		"0"
+	 "ability3"			"counter_helix_datadriven"
+	 }
+		"npc_dota_hero_slark_tor"
+	{
+	 "AbilityLayout" "4"
+	 "override_hero"	"npc_dota_hero_slark"
+	 "soundset"		"0"
+	 "ability3"			"slark_essence_shift_datadriven"
+	 }
+		"npc_dota_hero_bloodseeker_tor"
+	{
+	 "AbilityLayout" "4"
+	 "override_hero"	"npc_dota_hero_bloodseeker"
+	 "soundset"		"0"
+	 "ability3"			"thirst"
+	 }
+	 
+}
+
+

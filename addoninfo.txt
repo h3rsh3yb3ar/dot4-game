@@ -1,0 +1,23 @@
+"AddonInfo"
+{
+	"maps"			"tor_5v5v5v5 tor_4v4v4v4 tor_3v3v3v3"
+	"IsPlayable"	"1"
+	"HeroGuidesSupported" "1"
+	"PenaltiesEnabled" "1"
+
+
+		"tor_5v5v5v5"
+	{
+					"MaxPlayers"                    "20"
+	}
+		"tor_4v4v4v4"
+	{
+					"MaxPlayers"                    "16"
+
+	}
+		"tor_3v3v3v3"
+	{
+					"MaxPlayers"                    "12"
+
+	}
+}
