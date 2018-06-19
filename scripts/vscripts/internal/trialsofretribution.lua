@@ -24,6 +24,8 @@ function Trialsofretribution:_InitTrialsofretribution()
 
   GameRules:SetFirstBloodActive( ENABLE_FIRST_BLOOD )
   GameRules:SetHideKillMessageHeaders( HIDE_KILL_BANNERS )
+ GameRules:SetStrategyTime( 0 )
+    GameRules:SetShowcaseTime( 0 )
 
   GameRules:SetCustomGameEndDelay( GAME_END_DELAY )
   GameRules:SetCustomVictoryMessageDuration( VICTORY_MESSAGE_DURATION )
