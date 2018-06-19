@@ -511,13 +511,11 @@ function Trialsofretribution:OnFortKilled( keys )
     end
   end
   if fortCount == 1 then
-    GameRules:SetCustomVictoryMessage( self.m_VictoryMessages[nTeamID] )
-    GameRules:SetGameWinner( nTeamID )
-    broadcast_kill_event.victory = 1
-	if(remainingFort:GetTeamNumber() == 6) then EmitAnnouncerSound("announcer_ann_custom_victory_06")end
-	if(remainingFort:GetTeamNumber() == 7) then EmitAnnouncerSound("announcer_ann_custom_victory_02")end
-	if(remainingFort:GetTeamNumber() == 8) then EmitAnnouncerSound("announcer_ann_custom_victory_10")end
-	if(remainingFort:GetTeamNumber() == 9) then EmitAnnouncerSound("announcer_ann_custom_victory_13")end
+    GameRules:SetGameWinner(remainingFort:GetTeamNumber())
+  if(remainingFort:GetTeamNumber() == 6) then EmitAnnouncerSound("announcer_ann_custom_victory_06")end
+  if(remainingFort:GetTeamNumber() == 7) then EmitAnnouncerSound("announcer_ann_custom_victory_02")end
+  if(remainingFort:GetTeamNumber() == 8) then EmitAnnouncerSound("announcer_ann_custom_victory_10")end
+  if(remainingFort:GetTeamNumber() == 9) then EmitAnnouncerSound("announcer_ann_custom_victory_13")end
     GameRules:SetSafeToLeave(true)
     
   end
@@ -579,6 +577,7 @@ end
 function kill(entity)
   entity:Kill()
 end
+
 
 
 -- This function is called 1 to 2 times as the player connects initially but before they 
