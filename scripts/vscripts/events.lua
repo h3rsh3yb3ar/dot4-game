@@ -449,124 +449,26 @@ EmitAnnouncerSound("announcer_ann_custom_tower_fall_06")end
 end
 
 function Trialsofretribution:OnFortKilled( keys )
-  local killedUnit = EntIndexToHScript( keys.entindex_killed )
-  local killedTeam = killedUnit:GetTeamNumber()
 
-  if(killedTeam == 6) then EmitAnnouncerSound("announcer_ann_custom_defeated_06")end 
-  if(killedTeam == 7) then EmitAnnouncerSound("announcer_ann_custom_defeated_02")end 
-  if(killedTeam == 8) then EmitAnnouncerSound("announcer_ann_custom_defeated_10")end 
-  if(killedTeam == 9) then EmitAnnouncerSound("announcer_ann_custom_defeated_13")end  
+  local deadAncient = EntIndexToHScript(keys.entindex_killed )
+  local killedTeamNumber = deadAncient:GetTeamNumber()
 
-  local all_units = Entities:FindAllInSphere(Vector(0,0,0), 12000.0)
-  local remainingFort
-  local fortCount = 0
-  local players = {}
+  if(killedTeamNumber == 6) then EmitAnnouncerSound("announcer_ann_custom_defeated_06")end
+  if(killedTeamNumber == 7) then EmitAnnouncerSound("announcer_ann_custom_defeated_02")end
+  if(killedTeamNumber == 8) then EmitAnnouncerSound("announcer_ann_custom_defeated_10")end
+  if(killedTeamNumber == 9) then EmitAnnouncerSound("announcer_ann_custom_defeated_13")end
 
-  local teams = {'tempest', 'altiar', 'radiant', 'dire'}
-  local lanes = {'top', 'mid', 'bot' }
-  local spawners = {}
+    for playerId = 0,19 do
+      local player = PlayerResource:GetPlayer(playerId)
+      if(player:GetTeamNumber() == killedTeamNumber) then
+        local hero = player:GetAssignedHero()
+        hero:SetRespawnsDisabled(true)
+        hero:RemoveSelf()
 
-  for _, value in pairs(lanes) do
-    local spawner = teams[killedTeam-5]..value
-    print('spawner name is: '..spawner)
-    table.insert(spawners, spawner)
-  end
-
-
-  --Destroy all units from team that lost, find all players on that team
-  for number,entity in pairs(all_units) do
-    print(entity:GetName())
-    for _, value in pairs(spawners) do
-      if entity:GetName() == value then
-        print('REMOVING SPAWNER')
-        print(entity:GetName())
-        entity:RemoveSelf()
       end
     end
-
-    if entity:GetTeamNumber() == killedTeam then
-      --print("number", number, "entity", entity:GetName())
-      if entity ~= killedUnit then
-        --Record all the players on the killed team
-        
-        if entity:IsPlayer() then
-          local contains = false
-          for _, value in pairs(players) do
-            if value == entity:GetPlayerID() then
-              contains = true
-            end
-          end
-          if contains == false then
-            table.insert(players, entity:GetPlayerID())
-          end
-        else
-          print("removing unit..", entity:GetName())
-          entity:RemoveSelf()
-        end
-      end
-    end
-    if IsValidEntity(entity) and entity ~= killedUnit and isAncient(entity) then
-      fortCount = fortCount + 1
-      remainingFort = entity
-    end
-  end
-  if fortCount == 1 then
-    GameRules:SetGameWinner(remainingFort:GetTeamNumber())
-  if(remainingFort:GetTeamNumber() == 6) then EmitAnnouncerSound("announcer_ann_custom_victory_06")end
-  if(remainingFort:GetTeamNumber() == 7) then EmitAnnouncerSound("announcer_ann_custom_victory_02")end
-  if(remainingFort:GetTeamNumber() == 8) then EmitAnnouncerSound("announcer_ann_custom_victory_10")end
-  if(remainingFort:GetTeamNumber() == 9) then EmitAnnouncerSound("announcer_ann_custom_victory_13")end
-    GameRules:SetSafeToLeave(true)
-    
   end
 
-  --puts all the players on the lost team on custom team 3
-  for _, playerID in pairs(players) do
-    local player = PlayerResource:GetPlayer(playerID)
-    local player1 = PlayerResource:GetPlayerName(playerID)
-    local hero = player:GetAssignedHero()
-      hero:SetRespawnsDisabled(true)
-     hero:RemoveSelf()
-
-  local level = keys.level
-  print(player)
-  print(hero)
-      file = InitLogFile("stats.txt", "test")
-  AppendToLogFile("stats.txt", "player eliminated: " )
-  AppendToLogFile("stats.txt", tostring(player) )
-  AppendToLogFile("stats.txt", "playing as: " )
-  AppendToLogFile("stats.txt", tostring(hero) )
-  AppendToLogFile("stats.txt", "At Level:" )
-  AppendToLogFile("stats.txt", tostring(level) )
-
-
-
-          
-
-  
-
-
-
-    local fow = Entities:FindByName( nil, "mid"):GetAbsOrigin()
-    AddFOWViewer(killedTeam, fow, 60000000, 999999999, false)
-    local fow = Entities:FindByName( nil, "radiant"):GetAbsOrigin()
-    AddFOWViewer(killedTeam, fow, 6000000, 999999999, false)
-    local fow = Entities:FindByName( nil, "dire"):GetAbsOrigin()
-    AddFOWViewer(killedTeam, fow, 6000000, 999999999, false)
-        local fow = Entities:FindByName( nil, "altiar"):GetAbsOrigin()
-    AddFOWViewer(killedTeam, fow, 6000000, 999999999, false)
-    local fow = Entities:FindByName( nil, "tempest"):GetAbsOrigin()
-    AddFOWViewer(killedTeam, fow, 6000000, 999999999, false)
-
-
-
-    
-
-  end
-
-  --todo: make custom 3 spectator like
-
-end
 
 function isAncient(entity)
   local name = entity:GetName()
