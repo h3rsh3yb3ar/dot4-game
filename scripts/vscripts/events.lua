@@ -457,7 +457,24 @@ function Trialsofretribution:OnFortKilled( keys )
   if(killedTeamNumber == 7) then EmitAnnouncerSound("announcer_ann_custom_defeated_02")end
   if(killedTeamNumber == 8) then EmitAnnouncerSound("announcer_ann_custom_defeated_10")end
   if(killedTeamNumber == 9) then EmitAnnouncerSound("announcer_ann_custom_defeated_13")end
-
+local fow = Entities:FindByName( nil, "mid"):GetAbsOrigin()
+    AddFOWViewer(killedTeamNumber, fow, 9999999, 999999999, false)
+    local fow = Entities:FindByName( nil, "radiant"):GetAbsOrigin()
+    AddFOWViewer(killedTeamNumber, fow, 9999999, 999999999, false)
+    local fow = Entities:FindByName( nil, "dire"):GetAbsOrigin()
+    AddFOWViewer(killedTeamNumber, fow, 9999999, 999999999, false)
+    local fow = Entities:FindByName( nil, "altiar"):GetAbsOrigin()
+    AddFOWViewer(killedTeamNumber, fow, 9999999, 999999999, false)
+    local fow = Entities:FindByName( nil, "tempest"):GetAbsOrigin()
+    AddFOWViewer(killedTeamNumber, fow, 9999999, 999999999, false)
+    local fow = Entities:FindByName( nil, "greenred"):GetAbsOrigin()
+    AddFOWViewer(killedTeamNumber, fow, 9999999, 999999999, false)
+    local fow = Entities:FindByName( nil, "redblue"):GetAbsOrigin()
+    AddFOWViewer(killedTeamNumber, fow, 9999999, 999999999, false)
+    local fow = Entities:FindByName( nil, "bluegrey"):GetAbsOrigin()
+    AddFOWViewer(killedTeamNumber, fow, 9999999, 999999999, false)
+        local fow = Entities:FindByName( nil, "greygreen"):GetAbsOrigin()
+    AddFOWViewer(killedTeamNumber, fow, 9999999, 999999999, false)
     for playerId = 0,19 do
       local player = PlayerResource:GetPlayer(playerId)
       if(player:GetTeamNumber() == killedTeamNumber) then
