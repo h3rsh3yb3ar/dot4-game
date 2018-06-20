@@ -501,7 +501,7 @@ for number,entity in pairs(heroes) do
 local winner = entity:GetTeam()
 if winner ~= _G.deadteam then
 GameRules:SetGameWinner(winner)
-SetSafeToLeave(true)
+GameRules:SetSafeToLeave(true)
     end
   end
 end
