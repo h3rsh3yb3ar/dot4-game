@@ -2,7 +2,6 @@
 
 require('internal/util')
 require('trialsofretribution')
-require("statcollection/init")
 require("libraries/selection")
 
 function Precache( context )

@@ -12,6 +12,7 @@ function Trialsofretribution:OnDisconnect(keys)
   local plyID = keys.PlayerID
   local team = plyID:GetTeamNumber()
 
+
   
 end
 -- The overall game state has changed
@@ -452,7 +453,7 @@ function Trialsofretribution:OnFortKilled( keys )
 
   local deadAncient = EntIndexToHScript(keys.entindex_killed )
   local killedTeamNumber = deadAncient:GetTeamNumber()
-
+  _G.fortsalive = _G.fortsalive - 1
   if(killedTeamNumber == 6) then EmitAnnouncerSound("announcer_ann_custom_defeated_06")end
   if(killedTeamNumber == 7) then EmitAnnouncerSound("announcer_ann_custom_defeated_02")end
   if(killedTeamNumber == 8) then EmitAnnouncerSound("announcer_ann_custom_defeated_10")end
@@ -484,8 +485,26 @@ local fow = Entities:FindByName( nil, "mid"):GetAbsOrigin()
 
       end
     end
+
+    if _G.fortsalive == 1 then
+      _G.deadteam = killedTeamNumber
+      Trialsofretribution:endgame(keys)
+
+    end
+
   end
 
+
+function Trialsofretribution:endgame(keys)
+local heroes = HeroList:GetAllHeroes()
+for number,entity in pairs(heroes) do
+local winner = entity:GetTeam()
+if winner ~= _G.deadteam then
+GameRules:SetGameWinner(winner)
+SetSafeToLeave(true)
+    end
+  end
+end
 
 function isAncient(entity)
   local name = entity:GetName()

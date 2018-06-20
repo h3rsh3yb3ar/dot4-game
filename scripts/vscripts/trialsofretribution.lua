@@ -178,6 +178,7 @@ _G.fallbotrange = 1
 _G.fallbotmelee = 1
 _G.snowbotrange = 1
 _G.snowbotmelee = 1
+_G.fortsalive = 4
     local repeat_interval = 30 -- Rerun this timer every *repeat_interval* game-time seconds
     local start_after = 0 -- Start this timer *start_after* game-time seconds later
     print ("Timer is running")
