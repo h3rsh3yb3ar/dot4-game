@@ -472,13 +472,13 @@ function Trialsofretribution:OnFortKilled( keys )
   local deadAncient = EntIndexToHScript(keys.entindex_killed )
   local killedTeamNumber = deadAncient:GetTeamNumber()
   _G.fortsalive = _G.fortsalive - 1
-if(killedTeamNumber == 6) then EmitAnnouncerSound("announcer_ann_custom_defeated_13")end -- red
+if(killedTeamNumber == 6 and _G.fortsalive ~= 1) then EmitAnnouncerSound("announcer_ann_custom_defeated_13")end -- red
  
-  if(killedTeamNumber == 7) then EmitAnnouncerSound("announcer_ann_custom_defeated_02")end -- yellow
+  if(killedTeamNumber == 7 and _G.fortsalive ~= 1) then EmitAnnouncerSound("announcer_ann_custom_defeated_02")end -- yellow
  
-  if(killedTeamNumber == 8) then EmitAnnouncerSound("announcer_ann_custom_defeated_10")end -- Green
+  if(killedTeamNumber == 8 and _G.fortsalive ~= 1) then EmitAnnouncerSound("announcer_ann_custom_defeated_10")end -- Green
  
-  if(killedTeamNumber == 9) then EmitAnnouncerSound("announcer_ann_custom_defeated_06")end -- Blue
+  if(killedTeamNumber == 9 and _G.fortsalive ~= 1) then EmitAnnouncerSound("announcer_ann_custom_defeated_06")end -- Blue
  
 local fow = Entities:FindByName( nil, "mid"):GetAbsOrigin()
     AddFOWViewer(killedTeamNumber, fow, 9999999, 999999999, false)
@@ -495,7 +495,7 @@ local fow = Entities:FindByName( nil, "mid"):GetAbsOrigin()
     local fow = Entities:FindByName( nil, "redblue"):GetAbsOrigin()
     AddFOWViewer(killedTeamNumber, fow, 9999999, 999999999, false)
     local fow = Entities:FindByName( nil, "bluegrey"):GetAbsOrigin()
-    AddFO WViewer(killedTeamNumber, fow, 9999999, 999999999, false)
+    AddFOWViewer(killedTeamNumber, fow, 9999999, 999999999, false)
         local fow = Entities:FindByName( nil, "greygreen"):GetAbsOrigin()
     AddFOWViewer(killedTeamNumber, fow, 9999999, 999999999, false)
     for playerId = 0,19 do
@@ -528,7 +528,7 @@ if winner ~= _G.deadteam then
 end
   if winner == 7 then
   GameRules:SetCustomVictoryMessage( "Yellow Team Victory!" )
-  EmitAnnouncerSound ("announcer_ann_custom_victory_02"
+  EmitAnnouncerSound ("announcer_ann_custom_victory_02")
 end
   if winner == 8 then
   GameRules:SetCustomVictoryMessage( "Green Team Victory!" )
