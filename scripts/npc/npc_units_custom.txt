@@ -388,7 +388,7 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_creep_lane"	// Class of entity of link to.
-		"Model"						"models/creeps/lane_creeps/creep_bad_melee/creep_bad_melee.mdl"	// Model.
+		"Model"						"models/items/undying/idol_of_ruination/ruin_wight_minion_gold.vmdl"	// Model.
 		"SoundSet"					"Creep_Bad_Melee_Mega"					// Name of sound set.
 		"ModelScale"				"1.12"
 		"Level"						"1"

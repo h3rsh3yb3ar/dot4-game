@@ -238,7 +238,7 @@ function SpawnCreeps()
     unit:SetInitialGoalEntity( waypoint )
   end
       if _G.fallbotrange == 0 then
-    local unit = CreateUnitByName("npc_dota_creep_custom2_ranged_upgraded_mega", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
+    local unit = CreateUnitByName("npc_dota_creep_custom3_ranged_upgraded_mega", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
     unit:SetInitialGoalEntity( waypoint )
   end
   if _G.fallbotmelee == 1 then
@@ -253,13 +253,13 @@ function SpawnCreeps()
     print ("units were spawned in!")
   end
     if _G.fallbotmelee == 0 then
-    local unit = CreateUnitByName("npc_dota_creep_custom2_melee_upgraded", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
+    local unit = CreateUnitByName("npc_dota_creep_custom3_melee_upgraded", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
     unit:SetInitialGoalEntity( waypoint )
-    local unit = CreateUnitByName("npc_dota_creep_custom2_melee_upgraded", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
+    local unit = CreateUnitByName("npc_dota_creep_custom3_melee_upgraded", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
     unit:SetInitialGoalEntity( waypoint )
-    local unit = CreateUnitByName("npc_dota_creep_custom2_melee_upgraded", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
+    local unit = CreateUnitByName("npc_dota_creep_custom3_melee_upgraded", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
     unit:SetInitialGoalEntity( waypoint )
-      local unit = CreateUnitByName("npc_dota_creep_custom2_melee_upgraded", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
+      local unit = CreateUnitByName("npc_dota_creep_custom3_melee_upgraded", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
     unit:SetInitialGoalEntity( waypoint )
     print ("units were spawned in!")
   end
@@ -276,7 +276,7 @@ function SpawnCreeps()
     unit:SetInitialGoalEntity( waypoint )
   end
       if _G.snowtoprange == 0 then
-    local unit = CreateUnitByName("npc_dota_creep_custom2_ranged_upgraded_mega", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
+    local unit = CreateUnitByName("npc_dota_creep_custom3_ranged_upgraded_mega", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
     unit:SetInitialGoalEntity( waypoint )
   end
 
@@ -292,13 +292,13 @@ function SpawnCreeps()
     print ("units were spawned in!")
   end
     if _G.snowtopmelee == 0 then
-    local unit = CreateUnitByName("npc_dota_creep_custom2_melee_upgraded", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
+    local unit = CreateUnitByName("npc_dota_creep_custom3_melee_upgraded", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
     unit:SetInitialGoalEntity( waypoint )
-    local unit = CreateUnitByName("npc_dota_creep_custom2_melee_upgraded", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
+    local unit = CreateUnitByName("npc_dota_creep_custom3_melee_upgraded", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
     unit:SetInitialGoalEntity( waypoint )
-    local unit = CreateUnitByName("npc_dota_creep_custom2_melee_upgraded", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
+    local unit = CreateUnitByName("npc_dota_creep_custom3_melee_upgraded", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
     unit:SetInitialGoalEntity( waypoint )
-      local unit = CreateUnitByName("npc_dota_creep_custom2_melee_upgraded", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
+      local unit = CreateUnitByName("npc_dota_creep_custom3_melee_upgraded", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
     unit:SetInitialGoalEntity( waypoint )
     print ("units were spawned in!")
   end
@@ -606,7 +606,7 @@ function SpawnCreepstempest()
     local unit = CreateUnitByName("npc_dota_creep_custom1_ranged_upgraded_mega", point, true, nil, nil, DOTA_TEAM_CUSTOM_2)
     unit:SetInitialGoalEntity( waypoint )
   end
-  if _G.direbotrange == 1 then
+  if _G.direbotmelee == 1 then
     local unit = CreateUnitByName("npc_dota_creep_custom1_melee", point, true, nil, nil, DOTA_TEAM_CUSTOM_2)
     unit:SetInitialGoalEntity( waypoint )
     local unit = CreateUnitByName("npc_dota_creep_custom1_melee", point, true, nil, nil, DOTA_TEAM_CUSTOM_2)
@@ -617,7 +617,7 @@ function SpawnCreepstempest()
     unit:SetInitialGoalEntity( waypoint )
     print ("units were spawned in!")
   end
-   if _G.direbotrange == 0 then
+   if _G.direbotmelee == 0 then
     local unit = CreateUnitByName("npc_dota_creep_custom1_melee_upgraded", point, true, nil, nil, DOTA_TEAM_CUSTOM_2)
     unit:SetInitialGoalEntity( waypoint )
     local unit = CreateUnitByName("npc_dota_creep_custom1_melee_upgraded", point, true, nil, nil, DOTA_TEAM_CUSTOM_2)
@@ -631,8 +631,7 @@ function SpawnCreepstempest()
 
 
 
-    _G.direbotmelee = 1
-_G.direbotrange = 1
+
     -- TEMPEST TOP CREEPS
     
     local point = Entities:FindByName( nil, "tempesttop"):GetAbsOrigin()
