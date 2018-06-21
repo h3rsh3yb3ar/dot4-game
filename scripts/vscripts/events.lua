@@ -498,12 +498,13 @@ local fow = Entities:FindByName( nil, "mid"):GetAbsOrigin()
     AddFOWViewer(killedTeamNumber, fow, 9999999, 999999999, false)
         local fow = Entities:FindByName( nil, "greygreen"):GetAbsOrigin()
     AddFOWViewer(killedTeamNumber, fow, 9999999, 999999999, false)
-    for playerId = 0,19 do
-      local player = PlayerResource:GetPlayer(playerId)
-      if(player:GetTeamNumber() == killedTeamNumber) then
-        local hero = player:GetAssignedHero()
-        hero:SetRespawnsDisabled(true)
-        hero:RemoveSelf()
+    
+      local heroes = HeroList:GetAllHeroes()
+      for number,entity in pairs(heroes) do
+      if(entity:GetTeam() == killedTeamNumber) then
+        
+        entity:SetRespawnsDisabled(true)
+        entity:RemoveSelf()
 
       end
     end
