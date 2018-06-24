@@ -395,17 +395,145 @@ function Trialsofretribution:OnCustomTowerKilled( keys )
         return
     end
    
-    if(tower_name == "radiantbot1" or tower_name == "radiantbot2" or tower_name == "radiantbot3" or tower_name == "radiantmid1" or tower_name == "radiantmid2" or tower_name == "radiantmid3" or tower_name == "radianttop1" or tower_name == "radianttop2" or tower_name == "radianttop3" or tower_name == "radianttop4" or tower_name == "radiantbot4") then
+    if(tower_name == "radiantbot1" or tower_name == "radiantbot2" or tower_name == "radiantbot3" or tower_name == "radiantmid1" or tower_name == "radiantmid2" or tower_name == "radiantmid3" or tower_name == "radianttop1" or tower_name == "radianttop2" or tower_name == "radianttop3" or tower_name == "radiantmid4" or tower_name == "radiantmid4") then
 EmitAnnouncerSound("announcer_ann_custom_tower_fall_10") end
+
+---------------------------------------------------- Radiant Tower Text Alerts -----------------------------------------------------------------------------------------------------------------
+    if tower_name == "radiantbot1" then
+       GameRules:SendCustomMessage("<font color='#008000'>Green's Top Tower </font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "radiantbot2" then
+       GameRules:SendCustomMessage("<font color='#008000'>Green's Tier 2 Top Tower</font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "radiantbot3" then
+       GameRules:SendCustomMessage("<font color='#008000'>Green's Tier 3 Top tower</font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "radiantmid1" then
+       GameRules:SendCustomMessage("<font color='#008000'>Green's Middle Tower </font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "radiantmid2" then
+       GameRules:SendCustomMessage("<font color='#008000'>Green's Tier 2 Middle Tower </font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "radiantmid3" then
+       GameRules:SendCustomMessage("<font color='#008000'>Green's Tier 3 Middle Tower </font> Has Fallen!", 0, 0)
+    end
+      if tower_name == "radianttop1" then
+       GameRules:SendCustomMessage("<font color='#008000'>Green's Bottom Tower </font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "radianttop2" then
+       GameRules:SendCustomMessage("<font color='#008000'>Green's Tier 2 Bottom Tower</font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "radianttop3" then
+       GameRules:SendCustomMessage("<font color='#008000'>Green's Tier 3 Bottom tower</font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "radiantmid4" then
+       GameRules:SendCustomMessage("<font color='#008000'>Green's Tier 4 tower</font> Has Fallen!", 0, 0)
+    end
+
     if(tower_name == "direbot1" or tower_name == "direbot2" or tower_name == "direbot3" or tower_name == "diremid1" or tower_name == "diremid2" or tower_name == "diremid3" or tower_name == "diretop1" or tower_name == "diretop2" or tower_name == "diretop3" or tower_name == "diretop4" or tower_name == "direbot4") then
 EmitAnnouncerSound("announcer_ann_custom_tower_fall_06")end
+---------------------------------------------------- Dire Tower Text Alerts ----------------------------------------------------------------------------------------------------------------------
+
+    if tower_name == "direbot1" then
+       GameRules:SendCustomMessage("<font color='#87ceeb'>Blue's Bottom Tower </font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "direbot2" then
+       GameRules:SendCustomMessage("<font color='#87ceeb'>Blue's Tier 2 Bottom Tower</font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "direbot3" then
+       GameRules:SendCustomMessage("<font color='#87ceeb'>Blue's Tier 3 Bottom Tower</font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "diremid1" then
+       GameRules:SendCustomMessage("<font color='#87ceeb'>Blue's Middle Tower </font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "diremid2" then
+       GameRules:SendCustomMessage("<font color='#87ceeb'>Blue's Tier 2 Middle Tower </font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "diremid3" then
+       GameRules:SendCustomMessage("<font color='#87ceeb'>Blue's Tier 3 Middle Tower </font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "diretop1" then
+       GameRules:SendCustomMessage("<font color='#87ceeb'>Blue's Top Tower </font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "diretop2" then
+       GameRules:SendCustomMessage("<font color='#87ceeb'>Blue's Tier 2 Top Tower</font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "diretop3" then
+       GameRules:SendCustomMessage("<font color='#87ceeb'>Blue's Tier 3 Top Tower</font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "diremid4" then
+       GameRules:SendCustomMessage("<font color='#87ceeb'>Blue's Tier 4 Tower</font> Has Fallen!", 0, 0)
+    end
+--------------------------------------------------Red Tower Text Alerts------------------------------------------------------------------------------------------------------------------------------
 	  if(tower_name == "fallbot1" or tower_name == "fallbot2" or tower_name == "fallbot3" or tower_name == "fallmid1" or tower_name == "fallmid2" or tower_name == "fallmid3" or tower_name == "falltop1" or tower_name == "falltop2" or tower_name == "falltop3" or tower_name == "falltop4" or tower_name == "fallbot4") then
 EmitAnnouncerSound("announcer_ann_custom_tower_fall_02")end
+
+    if tower_name == "snowbot1" then
+       GameRules:SendCustomMessage("<font color='#ff0000'>Red's Top Tower </font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "snowbot2" then
+       GameRules:SendCustomMessage("<font color='#ff0000'>Red's Tier 2 Top Tower</font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "snowbot3" then
+       GameRules:SendCustomMessage("<font color='#ff0000'>Red's Tier 3 Top Tower</font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "snowmid1" then
+       GameRules:SendCustomMessage("<font color='#ff0000'>Red's Middle Tower </font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "snowmid2" then
+       GameRules:SendCustomMessage("<font color='#ff0000'>Red's Tier 2 Middle Tower </font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "snowmid3" then
+       GameRules:SendCustomMessage("<font color='#ff0000'>Red's Tier 3 Middle Tower </font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "snowtop1" then
+       GameRules:SendCustomMessage("<font color='#ff0000'>Red's Bottom Tower </font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "snowtop2" then
+       GameRules:SendCustomMessage("<font color='#ff0000'>Red's Tier 2 Bottom Tower</font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "snowtop3" then
+       GameRules:SendCustomMessage("<font color='#ff0000'>Red's Tier 3 Bottom Tower</font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "snowmid4" then
+       GameRules:SendCustomMessage("<font color='#ff0000'>Red's Tier 4 Tower</font> Has Fallen!", 0, 0)
+    end
+
 	      if(tower_name == "snowbot1" or tower_name == "snowbot2" or tower_name == "snowbot3" or tower_name == "snowmid1" or tower_name == "snowmid2" or tower_name == "snowmid3" or tower_name == "snowtop1" or tower_name == "snowtop2" or tower_name == "snowtop3" or tower_name == "snowtop4" or tower_name == "snowbot4") then
  
 EmitAnnouncerSound("announcer_ann_custom_tower_fall_13")end
+---------------------------------------------Yellow Tower Text Alerts---------------------------------------------------------------------------------------------------------------------------------------------
  
- 
+     if tower_name == "fallbot1" then
+       GameRules:SendCustomMessage("<font color='#FFFF00'>Yellow's Top Tower </font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "fallbot2" then
+       GameRules:SendCustomMessage("<font color='#FFFF00'>Yellow's Tier 2 Top Tower</font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "fallbot3" then
+       GameRules:SendCustomMessage("<font color='#FFFF00'>Yellow's Tier 3 Top Tower</font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "fallmid1" then
+       GameRules:SendCustomMessage("<font color='#FFFF00'>Yellow's Middle Tower </font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "fallmid2" then
+       GameRules:SendCustomMessage("<font color='#FFFF00'>Yellow's Tier 2 Middle Tower </font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "fallmid3" then
+       GameRules:SendCustomMessage("<font color='#FFFF00'>Yellow's Tier 3 Middle Tower </font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "falltop1" then
+       GameRules:SendCustomMessage("<font color='#FFFF00'>Yellow's Bottom Tower </font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "falltop2" then
+       GameRules:SendCustomMessage("<font color='#FFFF00'>Yellow's Tier 2 Bottom Tower</font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "falltop3" then
+       GameRules:SendCustomMessage("<font color='#FFFF00'>Yellow's Tier 3 Bottom Tower</font> Has Fallen!", 0, 0)
+    end
+    if tower_name == "fallmid4" then
+       GameRules:SendCustomMessage("<font color='#FFFF00'>Yellow's Tier 4 Tower</font> Has Fallen!", 0, 0)
+    end
     local tower_num = tonumber(tower_name:sub(string.len(tower_name),string.len(tower_name)))
    
     --Make sure what we're looking at is a tower.
@@ -473,8 +601,14 @@ function Trialsofretribution:OnFortKilled( keys )
   local killedTeamNumber = deadAncient:GetTeamNumber()
   _G.fortsalive = _G.fortsalive - 1
 if(killedTeamNumber == 6 and _G.fortsalive ~= 1) then EmitAnnouncerSound("announcer_ann_custom_defeated_13")end -- red
+
+if KilledTeamNumber == 6 then
+  GameRules:SendCustomMessage("<font color='#008000'>  Green Has been </font> <font color='#FF0000'>Eliminated!</font>", 0, 0) end
  
   if(killedTeamNumber == 7 and _G.fortsalive ~= 1) then EmitAnnouncerSound("announcer_ann_custom_defeated_02")end -- yellow
+
+if KilledTeamNumber == 7 then
+   GameRules:SendCustomMessage("<font color='#FFFF00'> Yellow </font> Has Been <font color='#FF0000'>Eliminated!</font>", 0, 0) end
  
   if(killedTeamNumber == 8 and _G.fortsalive ~= 1) then EmitAnnouncerSound("announcer_ann_custom_defeated_10")end -- Green
  
