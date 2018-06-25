@@ -131,7 +131,7 @@ function Trialsofretribution:_InitTrialsofretribution()
   if TRIALSOFRETRIBUTION_DEBUG_SPEW then
     spew = 1
   end
-  Convars:RegisterConvar('trialsofretribution_spew', tostring(spew), 'Set to 1 to start spewing junglebash debug info.  Set to 0 to disable.', 0)
+  
   
 
   -- Change random seed

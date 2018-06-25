@@ -1,23 +1,12 @@
 function DebugPrint(...)
-  local spew = Convars:GetInt('trialsofretribution_spew') or -1
-  if spew == -1 and TRIALSOFRETRIBUTION_DEBUG_SPEW then
-    spew = 1
-  end
-
-  if spew == 1 then
-    print(...)
-  end
+  
+  
 end
 
 function DebugPrintTable(...)
-  local spew = Convars:GetInt('trialsofretribution_spew') or -1
-  if spew == -1 and TRIALSOFRETRIBUTION_DEBUG_SPEW then
-    spew = 1
-  end
 
-  if spew == 1 then
-    PrintTable(...)
-  end
+ 
+  
 end
 
 function PrintTable(t, indent, done)

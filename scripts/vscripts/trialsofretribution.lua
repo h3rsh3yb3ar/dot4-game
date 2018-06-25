@@ -3,8 +3,8 @@ TRIALSOFRETRIBUTION_VERSION = "1.00"
 
 -- Set this to true if you want to see a complete debug output of all events/processes done by trialsofretribution
 -- You can also change the cvar 'trialsofretribution_spew' at any time to 1 or 0 for output/no output
-TRIALSOFRETRIBUTION_DEBUG_SPEW = false 
-
+TRIALSOFRETRIBUTION_DEBUG_SPEW = false
+trialsofretribution_spew = 0
 if Trialsofretribution == nil then
     DebugPrint( '[TRIALSOFRETRIBUTION] creating trialsofretribution game mode' )
     _G.Trialsofretribution = class({})
@@ -147,6 +147,29 @@ _G.heroteam4 = _G.heroteam4 + 1
 end
 print(_G.heroteam1 .. "heroes on team 1 " .. _G.heroteam2 .. "heroes on team 2 " .. _G.heroteam3 .. "heroes on team 3 " .. _G.heroteam4 .. "heroes on team 4 ")
 
+if _G.heroteam1 < _G.heroteam2 or _G.heroteam3 or _G.heroteam4 then
+    local repeat_interval = 2 -- Rerun this timer every *repeat_interval* game-time seconds
+    local start_after = 0 -- Start this timer *start_after* game-time seconds later
+    print ("Timer is running")
+  EmitAnnouncerSound("announcer_announcer_welcome_07")
+    Timers:CreateTimer(start_after, function()
+        team1bonusgold()
+        return repeat_interval
+    end)
+end 
+
+function team1bonusgold()
+local heroes = HeroList:GetAllHeroes()
+for number,entity in pairs(heroes) do
+local pteam = entity:GetTeam()
+if pteam == 6 then
+local player = entity:GetPlayerID()
+local gold = player:GetGold()
+player:SetGold(gold + 100, true )
+end
+
+end
+end
 _G.canspawn = true
 _G.canspawn2 = true
 _G.canspawn3 = true
