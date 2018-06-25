@@ -122,6 +122,31 @@ end
 ]]
 function Trialsofretribution:OnGameInProgress()
   CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_5] = 15
+_G.heroteam1 = 0
+_G.heroteam2 = 0
+_G.heroteam3 = 0
+_G.heroteam4 = 0
+
+-- Handles unbalanced number of players on a team
+local heroes = HeroList:GetAllHeroes()
+for number,entity in pairs(heroes) do
+local pteam = entity:GetTeam()
+if pteam == 6 then
+_G.heroteam1 = _G.heroteam1 + 1
+end
+if pteam == 7 then
+_G.heroteam2 = _G.heroteam2 + 1
+  end
+  if pteam == 8 then
+_G.heroteam3 = _G.heroteam3 + 1
+  end
+  if pteam == 9 then
+_G.heroteam4 = _G.heroteam4 + 1
+  end
+  
+end
+print(_G.heroteam1 .. "heroes on team 1 " .. _G.heroteam2 .. "heroes on team 2 " .. _G.heroteam3 .. "heroes on team 3 " .. _G.heroteam4 .. "heroes on team 4 ")
+
 _G.canspawn = true
 _G.canspawn2 = true
 _G.canspawn3 = true
@@ -250,7 +275,7 @@ function SpawnCreeps()
     unit:SetInitialGoalEntity( waypoint )
 	    local unit = CreateUnitByName("npc_dota_creep_custom3_melee", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
     unit:SetInitialGoalEntity( waypoint )
-    print ("units were spawned in!")
+    
   end
     if _G.fallbotmelee == 0 then
     local unit = CreateUnitByName("npc_dota_creep_custom3_melee_upgraded", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
@@ -261,7 +286,7 @@ function SpawnCreeps()
     unit:SetInitialGoalEntity( waypoint )
       local unit = CreateUnitByName("npc_dota_creep_custom3_melee_upgraded", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
     unit:SetInitialGoalEntity( waypoint )
-    print ("units were spawned in!")
+    
   end
     
     
@@ -289,7 +314,7 @@ function SpawnCreeps()
     unit:SetInitialGoalEntity( waypoint )
 	    local unit = CreateUnitByName("npc_dota_creep_custom3_melee", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
     unit:SetInitialGoalEntity( waypoint )
-    print ("units were spawned in!")
+    
   end
     if _G.snowtopmelee == 0 then
     local unit = CreateUnitByName("npc_dota_creep_custom3_melee_upgraded", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
@@ -300,13 +325,13 @@ function SpawnCreeps()
     unit:SetInitialGoalEntity( waypoint )
       local unit = CreateUnitByName("npc_dota_creep_custom3_melee_upgraded", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
     unit:SetInitialGoalEntity( waypoint )
-    print ("units were spawned in!")
+    
   end
 		end
 
     local repeat_interval = 30 -- Rerun this timer every *repeat_interval* game-time seconds
     local start_after = 0 -- Start this timer *start_after* game-time seconds later
-    print ("Timer 2 is running")
+    
 
     Timers:CreateTimer(start_after, function()
         SpawnCreepsaltiar()
@@ -338,7 +363,7 @@ function SpawnCreepsaltiar()
     unit:SetInitialGoalEntity( waypoint )
 	    local unit = CreateUnitByName("npc_dota_creep_custom2_melee", point, true, nil, nil, DOTA_TEAM_CUSTOM_1)
     unit:SetInitialGoalEntity( waypoint )
-    print ("units were spawned in!")
+    
   end
       if _G.radiantmidmelee == 0 then
     local unit = CreateUnitByName("npc_dota_creep_custom2_melee_upgraded", point, true, nil, nil, DOTA_TEAM_CUSTOM_1)
@@ -349,7 +374,7 @@ function SpawnCreepsaltiar()
     unit:SetInitialGoalEntity( waypoint )
       local unit = CreateUnitByName("npc_dota_creep_custom2_melee_upgraded", point, true, nil, nil, DOTA_TEAM_CUSTOM_1)
     unit:SetInitialGoalEntity( waypoint )
-    print ("units were spawned in!")
+    
   end
        
 -- ALTIAR BOT CREEPS
@@ -374,7 +399,7 @@ if _G.diretopmelee == 1 then
     unit:SetInitialGoalEntity( waypoint )
 	    local unit = CreateUnitByName("npc_dota_creep_custom2_melee", point, true, nil, nil, DOTA_TEAM_CUSTOM_1)
     unit:SetInitialGoalEntity( waypoint )
-    print ("units were spawned in!")
+    
   end
     if _G.diretopmelee == 0 then
     local unit = CreateUnitByName("npc_dota_creep_custom2_melee_upgraded", point, true, nil, nil, DOTA_TEAM_CUSTOM_1)
@@ -385,7 +410,7 @@ if _G.diretopmelee == 1 then
     unit:SetInitialGoalEntity( waypoint )
       local unit = CreateUnitByName("npc_dota_creep_custom2_melee_upgraded", point, true, nil, nil, DOTA_TEAM_CUSTOM_1)
     unit:SetInitialGoalEntity( waypoint )
-    print ("units were spawned in!")
+    
   end
     
 -- ALTIAR TOP CREEPS
@@ -410,7 +435,7 @@ if _G.diretopmelee == 1 then
     unit:SetInitialGoalEntity( waypoint )
 	    local unit = CreateUnitByName("npc_dota_creep_custom2_melee", point, true, nil, nil, DOTA_TEAM_CUSTOM_1)
     unit:SetInitialGoalEntity( waypoint )
-    print ("units were spawned in!")
+    
 		end
       if _G.radiantbotmelee == 0 then
     local unit = CreateUnitByName("npc_dota_creep_custom2_melee_upgraded", point, true, nil, nil, DOTA_TEAM_CUSTOM_1)
@@ -421,13 +446,13 @@ if _G.diretopmelee == 1 then
     unit:SetInitialGoalEntity( waypoint )
       local unit = CreateUnitByName("npc_dota_creep_custom2_melee_upgraded", point, true, nil, nil, DOTA_TEAM_CUSTOM_1)
     unit:SetInitialGoalEntity( waypoint )
-    print ("units were spawned in!")
+    
     end
   end
 
     local repeat_interval = 30 -- Rerun this timer every *repeat_interval* game-time seconds
     local start_after = 0 -- Start this timer *start_after* game-time seconds later
-    print ("Timer 2 is running")
+    
 
     Timers:CreateTimer(start_after, function()
         SpawnCreepsdire()
