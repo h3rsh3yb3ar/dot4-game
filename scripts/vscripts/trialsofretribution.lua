@@ -121,7 +121,6 @@ end
   is useful for starting any game logic timers/thinkers, beginning the first round, etc.
 ]]
 function Trialsofretribution:OnGameInProgress()
-  CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_5] = 15
 _G.heroteam1 = 0
 _G.heroteam2 = 0
 _G.heroteam3 = 0
@@ -145,9 +144,10 @@ _G.heroteam4 = _G.heroteam4 + 1
   end
   
 end
+
 print(_G.heroteam1 .. "heroes on team 1 " .. _G.heroteam2 .. "heroes on team 2 " .. _G.heroteam3 .. "heroes on team 3 " .. _G.heroteam4 .. "heroes on team 4 ")
 
-if _G.heroteam1 < _G.heroteam2 or _G.heroteam3 or _G.heroteam4 then
+if _G.heroteam1 < _G.heroteam2 or _G.heroteam1 < _G.heroteam3 or _G.heroteam1 < _G.heroteam4 then
     local repeat_interval = 2 -- Rerun this timer every *repeat_interval* game-time seconds
     local start_after = 0 -- Start this timer *start_after* game-time seconds later
     print ("Timer is running")
@@ -158,16 +158,82 @@ if _G.heroteam1 < _G.heroteam2 or _G.heroteam3 or _G.heroteam4 then
     end)
 end 
 
+if _G.heroteam2 < _G.heroteam1 or _G.heroteam2 < _G.heroteam3 or _G.heroteam2 < _G.heroteam4 then
+    local repeat_interval = 2 -- Rerun this timer every *repeat_interval* game-time seconds
+    local start_after = 0 -- Start this timer *start_after* game-time seconds later
+    print ("Timer is running")
+  EmitAnnouncerSound("announcer_announcer_welcome_07")
+    Timers:CreateTimer(start_after, function()
+        team2bonusgold()
+        return repeat_interval
+    end)
+end 
+
+if _G.heroteam3 < _G.heroteam1 or _G.heroteam3 < _G.heroteam2 or _G.heroteam3 < _G.heroteam4 then
+    local repeat_interval = 2 -- Rerun this timer every *repeat_interval* game-time seconds
+    local start_after = 0 -- Start this timer *start_after* game-time seconds later
+    print ("Timer is running")
+  EmitAnnouncerSound("announcer_announcer_welcome_07")
+    Timers:CreateTimer(start_after, function()
+        team3bonusgold()
+        return repeat_interval
+    end)
+end 
+
+if _G.heroteam4 < _G.heroteam1 or _G.heroteam4 < _G.heroteam2 or _G.heroteam4 < _G.heroteam3 then
+    local repeat_interval = 2 -- Rerun this timer every *repeat_interval* game-time seconds
+    local start_after = 0 -- Start this timer *start_after* game-time seconds later
+    print ("Timer is running")
+  EmitAnnouncerSound("announcer_announcer_welcome_07")
+    Timers:CreateTimer(start_after, function()
+        team4bonusgold()
+        return repeat_interval
+    end)
+end 
+
+
 function team1bonusgold()
 local heroes = HeroList:GetAllHeroes()
 for number,entity in pairs(heroes) do
 local pteam = entity:GetTeam()
 if pteam == 6 then
 local player = entity:GetPlayerID()
-local gold = player:GetGold()
-player:SetGold(gold + 100, true )
+local gold = PlayerResource:GetGold(player)
+PlayerResource:SetGold( player, gold + 1.04, true )
 end
-
+end
+end
+function team2bonusgold()
+local heroes = HeroList:GetAllHeroes()
+for number,entity in pairs(heroes) do
+local pteam = entity:GetTeam()
+if pteam == 7 then
+local player = entity:GetPlayerID()
+local gold = PlayerResource:GetGold(player)
+PlayerResource:SetGold( player, gold + 1.04, true )
+end
+end
+end
+function team3bonusgold()
+local heroes = HeroList:GetAllHeroes()
+for number,entity in pairs(heroes) do
+local pteam = entity:GetTeam()
+if pteam == 8 then
+local player = entity:GetPlayerID()
+local gold = PlayerResource:GetGold(player)
+PlayerResource:SetGold( player, gold + 1.04, true )
+end
+end
+end
+function team4bonusgold()
+local heroes = HeroList:GetAllHeroes()
+for number,entity in pairs(heroes) do
+local pteam = entity:GetTeam()
+if pteam == 9 then
+local player = entity:GetPlayerID()
+local gold = PlayerResource:GetGold(player)
+PlayerResource:SetGold( player, gold + 1.04, true )
+end
 end
 end
 _G.canspawn = true
@@ -837,7 +903,7 @@ function SpawnCreepssiegealtiar()
     unit:SetInitialGoalEntity( waypoint )
 end
 
-
+--[[
 -- JUNGLE CAMP FUNCTIONS
     local start_after = 0 -- Start this timer *start_after* game-time seconds later
     local repeat_interval = 60
@@ -2223,7 +2289,7 @@ end
 end
 
 end
-
+]]
 end
 
 
