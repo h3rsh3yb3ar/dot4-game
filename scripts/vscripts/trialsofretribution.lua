@@ -90,6 +90,10 @@ end
 function Trialsofretribution:OnAllPlayersLoaded()
   DebugPrint("[TRIALSOFRETRIBUTION] All Players have loaded into the game")
   EmitAnnouncerSound("announcer_announcer_now_select")
+_G.reconnect1 = 1 
+_G.reconnect2 = 1 
+_G.reconnect3 = 1 
+_G.reconnect4 = 1 
 end
 
 --[[

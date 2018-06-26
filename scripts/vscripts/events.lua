@@ -5,6 +5,7 @@ function Trialsofretribution:OnDisconnect(keys)
   DebugPrint('[TRIALSOFRETRIBUTION] Player Disconnected ' .. tostring(keys.userid))
   DebugPrintTable(keys)
 
+
   local name = keys.name
   local networkid = keys.networkid
   local reason = keys.reason
@@ -12,8 +13,141 @@ function Trialsofretribution:OnDisconnect(keys)
   local plyID = keys.PlayerID
   local team = plyID:GetTeamNumber()
 
+  if team == 6 then
+    _G.reconnect1 = 0
+     local start_after = 300 -- Start this timer *start_after* game-time seconds later
+    print ("Timer is running")
+  EmitAnnouncerSound("announcer_announcer_welcome_07")
+    Timers:CreateTimer(start_after, function()
+        team1bonusgoldtimer()
+        
+    end)
+
+
+  end
+
+    if team == 7 then
+      _G.reconnect2 = 0
+     local start_after = 300 -- Start this timer *start_after* game-time seconds later
+    print ("Timer is running")
+  EmitAnnouncerSound("announcer_announcer_welcome_07")
+    Timers:CreateTimer(start_after, function()
+        team2bonusgoldtimer()
+        
+    end)
+
+
+  end
+
+    if team == 8 then
+      _G.reconnect3 = 0
+     local start_after = 300 -- Start this timer *start_after* game-time seconds later
+    print ("Timer is running")
+  EmitAnnouncerSound("announcer_announcer_welcome_07")
+    Timers:CreateTimer(start_after, function()
+        team3bonusgoldtimer()
+        
+    end)
+
+
+  end
+
+    if team == 9 then
+      _G.reconnect4 = 0
+     local start_after = 300 -- Start this timer *start_after* game-time seconds later
+    print ("Timer is running")
+  EmitAnnouncerSound("announcer_announcer_welcome_07")
+    Timers:CreateTimer(start_after, function()
+        team4bonusgoldtimer()
+        
+    end)
+
+
+  end
+
 
   
+end
+
+function team1bonusgoldtimer()
+    Timers:CreateTimer(start_after, function()
+        team1bonusgolddisconnect()
+        
+    end)
+end
+
+function team1bonusgoldtimer()
+    Timers:CreateTimer(start_after, function()
+        team2bonusgolddisconnect()
+        
+    end)
+end
+
+function team1bonusgoldtimer()
+    Timers:CreateTimer(start_after, function()
+        team3bonusgolddisconnect()
+        
+    end)
+end
+
+function team1bonusgoldtimer()
+    Timers:CreateTimer(start_after, function()
+        team4bonusgolddisconnect()
+        
+    end)
+end
+
+function team1bonusgolddisconnect()
+  if _G.reconnect1 == 0 then
+local heroes = HeroList:GetAllHeroes()
+for number,entity in pairs(heroes) do
+local pteam = entity:GetTeam()
+if pteam == 6 then
+local player = entity:GetPlayerID()
+local gold = PlayerResource:GetGold(player)
+PlayerResource:SetGold( player, gold + 1.04, true )
+end
+end
+end
+end
+function team2bonusgolddisconnect()
+  if _G.reconnect2 == 0 then
+local heroes = HeroList:GetAllHeroes()
+for number,entity in pairs(heroes) do
+local pteam = entity:GetTeam()
+if pteam == 7 then
+local player = entity:GetPlayerID()
+local gold = PlayerResource:GetGold(player)
+PlayerResource:SetGold( player, gold + 1.04, true )
+end
+end
+end
+end
+function team3bonusgolddisconnect()
+if _G.reconnect3 == 0 then
+local heroes = HeroList:GetAllHeroes()
+for number,entity in pairs(heroes) do
+local pteam = entity:GetTeam()
+if pteam == 8 then
+local player = entity:GetPlayerID()
+local gold = PlayerResource:GetGold(player)
+PlayerResource:SetGold( player, gold + 1.04, true )
+end
+end
+end
+end
+function team4bonusgolddisconnect()
+  if _G.reconnect4 == 0 then
+local heroes = HeroList:GetAllHeroes()
+for number,entity in pairs(heroes) do
+local pteam = entity:GetTeam()
+if pteam == 9 then
+local player = entity:GetPlayerID()
+local gold = PlayerResource:GetGold(player)
+PlayerResource:SetGold( player, gold + 1.04, true )
+end
+end
+end
 end
 -- The overall game state has changed
 function Trialsofretribution:OnGameRulesStateChange(keys)
@@ -73,6 +207,25 @@ end
 function Trialsofretribution:OnPlayerReconnect(keys)
   DebugPrint( '[TRIALSOFRETRIBUTION] OnPlayerReconnect' )
   DebugPrintTable(keys) 
+   local name = keys.name
+  local networkid = keys.networkid
+  local reason = keys.reason
+  local userid = keys.userid
+  local plyID = keys.PlayerID
+  local team = plyID:GetTeamNumber()
+
+  if team == 6 then
+_G.reconnect1 = 1
+  end
+    if team == 7 then
+_G.reconnect2 = 1
+  end
+    if team == 8 then
+_G.reconnect3 = 1
+  end
+    if team == 9 then
+_G.reconnect4 = 1
+  end
 end
 
 -- An item was purchased by a player
