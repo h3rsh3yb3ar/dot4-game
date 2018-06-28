@@ -286,4 +286,9 @@
   //"item_recipe_hurricane_pike"      "REMOVE"
   //"item_hurricane_pike"      "REMOVE"
   //"item_banana"      "REMOVE"
+
+  "item_forseers_flare"
+  {
+    "ItemShareability"        "ITEM_FULLY_SHAREABLE"
+  }
 }
