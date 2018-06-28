@@ -17,6 +17,7 @@
 		"item"		"item_dust"
 		"item"		"item_courier"
 		"item"		"item_flying_courier"
+		"item"		"item_forseers_flare"
 		"item"		"item_ward_observer"
 		"item"		"item_ward_sentry"
 		"item"		"item_tome_of_knowledge"
