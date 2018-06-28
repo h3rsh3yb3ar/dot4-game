@@ -10712,5 +10712,63 @@
 		"VisionNighttimeRange"		"800"		// Range of vision at night time.
 		
 		//Inventory
+	}
+	"npc_vision_dummy"
+	{										
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"					"npc_dota_building"					// Class of entity of link to.
+		"Model"						"maps/cavern_assets/models/lightrays/lightrays_cavern_01.vmdl"		// Model.
+		"SoundSet"					"Hero_Rattletrap"													// Name of sound set.
+		"ModelScale" 				".825"
+		"Level"						"1"
+		"CanBeDominated"			"0"
+		"MinimapIconSize"				"0"
+
+		// Armor
+		//-------------------------------------------------------------------------------------------------------------
+		"ArmorPhysical"				"10"								// Physical protection.
+
+		// Abilities
+		//----------------------------------------------------------------
+		
+		"Ability1"					"vision_dummy_passive"			// Ability 1.
+		"Ability2"					"dummy_passive_fly"
+
+		// Attack
+		//-------------------------------------------------------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"99999"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"200"		// Experience earn.
+		"BountyGoldMin"				"300"		// Gold earned min.
+		"BountyGoldMax"				"300"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_NO_MOVE"
+		"MovementSpeed"				"0"		// Speed.
+		"MovementTurnRate"			"0.6"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"3000"		// Base health.
+		"StatusHealthRegen"			"2"			// Health regeneration rate.
+		"StatusMana"				"3000"		// Base mana.
+		"StatusManaRegen"			"5.0"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1200"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1200"		// Range of vision at night time.
+		"EffectName"				"particles/dire_shrine_ambient_flares.vpcf"
+
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
 	}	
 }

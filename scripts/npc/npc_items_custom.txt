@@ -200,7 +200,65 @@
 }
 
 
+//=================================================================================================================
+	// Reveal Thingy
+	//=================================================================================================================
+	"item_forseers_flare"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1027"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNEL" 
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"forseers_flare"
+		"ItemKillable"					"0"
+		"ItemShareable"					"1"
+		"ChannelDuration"				"2.0"
+		"HasFlyingVision"				"1"
 
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"       "9999999999"
+		"AbilityCastPoint"       "0"
+		"AbilityCastAnimation"  "pudge_meat_hook"
+		"AbilityCastAnimation"  "pudge_meat_hook"
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"        "1"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"        "0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"40"
+		"ItemStackable"					"1"
+		"ItemInitialCharges"			"1"
+		"ItemQuality"					"common"
+		"SideShop"						"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		"OnSpellStart"
+		{
+			"SpawnUnit"
+			{
+				"UnitName"				"npc_vision_dummy"
+				"Target" 				"POINT"
+				"UnitCount"				"1"
+				"Duration"				"30"
+			}
+
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/flare.lua"
+				"Function"				"RevealUsed"
+				"Target"				"TARGET"
+				"Caster"				"CASTER"
+			}
+		}
+	}
 
 }
 
