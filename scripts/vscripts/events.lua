@@ -535,7 +535,7 @@ end
 function Trialsofretribution:OnCustomTowerKilled( keys )
     local killer = EntIndexToHScript( keys.entindex_attacker )
     local killedUnit = EntIndexToHScript( keys.entindex_killed )
-   
+   local killedunitteam = killedUnit:GetTeam()
     --For reference, the teams are mapped as follows
     --Team 6 = Tempest
     --Team 7  = Altair
@@ -547,9 +547,9 @@ function Trialsofretribution:OnCustomTowerKilled( keys )
     if tower_name == nil then
         return
     end
-   
+   if killer:GetTeam() ~= killedunitteam then
     if(tower_name == "radiantbot1" or tower_name == "radiantbot2" or tower_name == "radiantbot3" or tower_name == "radiantmid1" or tower_name == "radiantmid2" or tower_name == "radiantmid3" or tower_name == "radianttop1" or tower_name == "radianttop2" or tower_name == "radianttop3" or tower_name == "radiantmid4" or tower_name == "radiantmid4") then
-EmitAnnouncerSound("announcer_ann_custom_tower_fall_10") end
+EmitAnnouncerSound("announcer_ann_custom_tower_fall_10") end end
 
 ---------------------------------------------------- Radiant Tower Text Alerts -----------------------------------------------------------------------------------------------------------------
     if tower_name == "radiantbot1" then
@@ -582,9 +582,9 @@ EmitAnnouncerSound("announcer_ann_custom_tower_fall_10") end
     if tower_name == "radiantmid4" then
        GameRules:SendCustomMessage("<font color='#008000'>Green's Tier 4 tower</font> Has Fallen!", 0, 0)
     end
-
+if killer:GetTeam() ~= killedunitteam then
     if(tower_name == "direbot1" or tower_name == "direbot2" or tower_name == "direbot3" or tower_name == "diremid1" or tower_name == "diremid2" or tower_name == "diremid3" or tower_name == "diretop1" or tower_name == "diretop2" or tower_name == "diretop3" or tower_name == "diretop4" or tower_name == "direbot4") then
-EmitAnnouncerSound("announcer_ann_custom_tower_fall_06")end
+EmitAnnouncerSound("announcer_ann_custom_tower_fall_06")end end
 ---------------------------------------------------- Dire Tower Text Alerts ----------------------------------------------------------------------------------------------------------------------
 
     if tower_name == "direbot1" then
@@ -617,9 +617,14 @@ EmitAnnouncerSound("announcer_ann_custom_tower_fall_06")end
     if tower_name == "diremid4" then
        GameRules:SendCustomMessage("<font color='#87ceeb'>Blue's Tier 4 Tower</font> Has Fallen!", 0, 0)
     end
---------------------------------------------------Red Tower Text Alerts------------------------------------------------------------------------------------------------------------------------------
+----
+
+
+
+----------------------------------------------Red Tower Text Alerts------------------------------------------------------------------------------------------------------------------------------
+if killer:GetTeam() ~= killedunitteam then
 	  if(tower_name == "fallbot1" or tower_name == "fallbot2" or tower_name == "fallbot3" or tower_name == "fallmid1" or tower_name == "fallmid2" or tower_name == "fallmid3" or tower_name == "falltop1" or tower_name == "falltop2" or tower_name == "falltop3" or tower_name == "falltop4" or tower_name == "fallbot4") then
-EmitAnnouncerSound("announcer_ann_custom_tower_fall_02")end
+EmitAnnouncerSound("announcer_ann_custom_tower_fall_02")end end
 
     if tower_name == "snowbot1" then
        GameRules:SendCustomMessage("<font color='#ff0000'>Red's Top Tower </font> Has Fallen!", 0, 0)
@@ -653,8 +658,8 @@ EmitAnnouncerSound("announcer_ann_custom_tower_fall_02")end
     end
 
 	      if(tower_name == "snowbot1" or tower_name == "snowbot2" or tower_name == "snowbot3" or tower_name == "snowmid1" or tower_name == "snowmid2" or tower_name == "snowmid3" or tower_name == "snowtop1" or tower_name == "snowtop2" or tower_name == "snowtop3" or tower_name == "snowtop4" or tower_name == "snowbot4") then
- 
-EmitAnnouncerSound("announcer_ann_custom_tower_fall_13")end
+ if killer:GetTeam() ~= killedunitteam then
+EmitAnnouncerSound("announcer_ann_custom_tower_fall_13")end end
 ---------------------------------------------Yellow Tower Text Alerts---------------------------------------------------------------------------------------------------------------------------------------------
  
      if tower_name == "fallbot1" then
