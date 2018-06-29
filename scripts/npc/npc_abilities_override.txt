@@ -290,5 +290,6 @@
   "item_forseers_flare"
   {
     "ItemShareability"        "ITEM_FULLY_SHAREABLE"
+    "AbilityTextureName" "item_forseers_flare"
   }
 }
