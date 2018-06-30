@@ -89,6 +89,14 @@ end
 ]]
 function Trialsofretribution:OnAllPlayersLoaded()
   DebugPrint("[TRIALSOFRETRIBUTION] All Players have loaded into the game")
+  EmitAnnouncerSound("announcer_announcer_ban_yr")
+  local start_after = 20
+      Timers:CreateTimer(start_after, function()
+        heroselect()
+        
+    end)
+end
+function heroselect()      
   EmitAnnouncerSound("announcer_announcer_now_select")
 _G.reconnect1 = 1 
 _G.reconnect2 = 1 

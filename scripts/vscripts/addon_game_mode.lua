@@ -97,5 +97,7 @@ function Activate()
   GameRules.Trialsofretribution = Trialsofretribution()
   GameRules.Trialsofretribution:_InitTrialsofretribution()
   GameRules:GetGameModeEntity():SetCameraDistanceOverride(1341)
+  GameRules:GetGameModeEntity():SetDraftingBanningTimeOverride( 20 )
+  GameRules:GetGameModeEntity():SetDraftingHeroPickSelectTimeOverride( 60 )
   
 end
