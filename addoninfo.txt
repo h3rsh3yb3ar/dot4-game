@@ -3,6 +3,7 @@
 	"maps"			"tor_5v5v5v5 tor_4v4v4v4 tor_3v3v3v3"
 	"IsPlayable"	"1"
 	"HeroGuidesSupported" "1"
+	"EnablePickRules" "1"
 	"PenaltiesEnabled" "1"
 
 
