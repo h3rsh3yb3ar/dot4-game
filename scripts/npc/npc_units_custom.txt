@@ -2145,7 +2145,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		
-		"Ability1"					""			// Ability 1.
+		"Ability1"					"backdoor_protection"			// Ability 1.
 		"Ability2"					""			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
@@ -2215,8 +2215,8 @@
 		
 		// Vision
 		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
-		"VisionNighttimeRange"		"1200"		// Range of vision at night time.
+		"VisionDaytimeRange"		"2600"		// Range of vision during day light.
+		"VisionNighttimeRange"		"2600"		// Range of vision at night time.
 	}	
 	
 //=================================================================================
@@ -4685,7 +4685,7 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_fort"	// Class of entity of link to.
-		"Model"						"models/buildings/building_racks_melee_reference.mdl"	// Model.
+		"Model"						"models/props_structures/radiant_ancient001.vmdl"	// Model.
 		"SoundSet"					"Creep_Good_Melee"					// Name of sound set.
 		"MinimapIcon"				"minimap_ancient"
 		"MinimapIconSize"			"400"
@@ -4695,7 +4695,7 @@
 		//----------------------------------------------------------------
 		
 		"Ability1"					"backdoor_protection"			// Ability 1.
-		"Ability2"					"speed_boost_ancient"			// Ability 2.
+		"Ability2"					""			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
@@ -4705,7 +4705,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"15"		// Physical protection.
+		"ArmorPhysical"				"18"		// Physical protection.
 		"MagicalResistance"				"0"			// Magical protection.
 
 		// Attack
@@ -4733,9 +4733,8 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"0"			// Experience earn.
-		"BountyGoldMin"				"500"			// Gold earned min.
-		"BountyGoldMax"				"500"			// Gold earned max.
+		"BountyGoldMin"				"0"			// Gold earned min.
+		"BountyGoldMax"				"0"			// Gold earned max.
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -4751,7 +4750,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"4250"		// Base health.
-		"StatusHealthRegen"			"3"			// Health regeneration rate.
+		"StatusHealthRegen"			"12"			// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
 
@@ -4764,9 +4763,9 @@
 		
 		// Vision
 		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
-		"VisionNighttimeRange"		"1200"		// Range of vision at night time.
-	}	
+		"VisionDaytimeRange"		"2600"		// Range of vision during day light.
+		"VisionNighttimeRange"		"2600"		// Range of vision at night time.
+	}		
 	
 //=================================================================================
 // Creeps: Altiar Siege
@@ -7189,7 +7188,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		
-		"Ability1"					""			// Ability 1.
+		"Ability1"					"backdoor_protection"			// Ability 1.
 		"Ability2"					""			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
@@ -7259,8 +7258,8 @@
 		
 		// Vision
 		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
-		"VisionNighttimeRange"		"1200"		// Range of vision at night time.
+		"VisionDaytimeRange"		"2600"		// Range of vision during day light.
+		"VisionNighttimeRange"		"2600"		// Range of vision at night time.
 	}	
 	
 //=================================================================================
@@ -9738,7 +9737,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		
-		"Ability1"					""			// Ability 1.
+		"Ability1"					"backdoor_protection"			// Ability 1.
 		"Ability2"					""			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
@@ -9808,8 +9807,8 @@
 		
 		// Vision
 		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
-		"VisionNighttimeRange"		"1200"		// Range of vision at night time.
+		"VisionDaytimeRange"		"2600"		// Range of vision during day light.
+		"VisionNighttimeRange"		"2600"		// Range of vision at night time.
 	}	
 	
 //=================================================================================
