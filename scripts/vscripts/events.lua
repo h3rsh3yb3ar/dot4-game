@@ -689,13 +689,13 @@ EmitAnnouncerSound("announcer_ann_custom_tower_fall_13")end end
 ---------------------------------------------Yellow Tower Text Alerts---------------------------------------------------------------------------------------------------------------------------------------------
  
      if tower_name == "fallbot1" then
-       GameRules:SendCustomMessage("<font color='#FFFF00'>Yellow's Top Tower </font> Has Fallen!", 0, 0)
+       GameRules:SendCustomMessage("<font color='#FFFF00'>Yellow's Bottom Tower </font> Has Fallen!", 0, 0)
     end
     if tower_name == "fallbot2" then
-       GameRules:SendCustomMessage("<font color='#FFFF00'>Yellow's Tier 2 Top Tower</font> Has Fallen!", 0, 0)
+       GameRules:SendCustomMessage("<font color='#FFFF00'>Yellow's Tier 2 Bottom Tower</font> Has Fallen!", 0, 0)
     end
     if tower_name == "fallbot3" then
-       GameRules:SendCustomMessage("<font color='#FFFF00'>Yellow's Tier 3 Top Tower</font> Has Fallen!", 0, 0)
+       GameRules:SendCustomMessage("<font color='#FFFF00'>Yellow's Tier 3 Bottom Tower</font> Has Fallen!", 0, 0)
     end
     if tower_name == "fallmid1" then
        GameRules:SendCustomMessage("<font color='#FFFF00'>Yellow's Middle Tower </font> Has Fallen!", 0, 0)
@@ -707,13 +707,13 @@ EmitAnnouncerSound("announcer_ann_custom_tower_fall_13")end end
        GameRules:SendCustomMessage("<font color='#FFFF00'>Yellow's Tier 3 Middle Tower </font> Has Fallen!", 0, 0)
     end
     if tower_name == "falltop1" then
-       GameRules:SendCustomMessage("<font color='#FFFF00'>Yellow's Bottom Tower </font> Has Fallen!", 0, 0)
+       GameRules:SendCustomMessage("<font color='#FFFF00'>Yellow's Top Tower </font> Has Fallen!", 0, 0)
     end
     if tower_name == "falltop2" then
-       GameRules:SendCustomMessage("<font color='#FFFF00'>Yellow's Tier 2 Bottom Tower</font> Has Fallen!", 0, 0)
+       GameRules:SendCustomMessage("<font color='#FFFF00'>Yellow's Tier 2 Top Tower</font> Has Fallen!", 0, 0)
     end
     if tower_name == "falltop3" then
-       GameRules:SendCustomMessage("<font color='#FFFF00'>Yellow's Tier 3 Bottom Tower</font> Has Fallen!", 0, 0)
+       GameRules:SendCustomMessage("<font color='#FFFF00'>Yellow's Tier 3 Top Tower</font> Has Fallen!", 0, 0)
     end
     if tower_name == "fallmid4" then
        GameRules:SendCustomMessage("<font color='#FFFF00'>Yellow's Tier 4 Tower</font> Has Fallen!", 0, 0)
