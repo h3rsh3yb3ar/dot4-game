@@ -90,11 +90,11 @@ end
 function Trialsofretribution:OnAllPlayersLoaded()
   DebugPrint("[TRIALSOFRETRIBUTION] All Players have loaded into the game")
   EmitAnnouncerSound("announcer_announcer_ban_yr")
-  local start_after = 20
+  local start_after = 10
       Timers:CreateTimer(start_after, function()
         heroselect()
-        
     end)
+      CustomUI:DynamicHud_Destroy(-1, "loading screen")
 end
 function heroselect()      
   EmitAnnouncerSound("announcer_announcer_now_select")

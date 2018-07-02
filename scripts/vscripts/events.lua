@@ -162,7 +162,7 @@ function Trialsofretribution:OnGameRulesStateChange(keys)
     --Timers:RemoveTimer("alljointimer")
   elseif newState == DOTA_GAMERULES_STATE_HERO_SELECTION then
     
-   
+
     Trialsofretribution:PostLoadPrecache()
     Trialsofretribution:OnAllPlayersLoaded()
 
@@ -227,6 +227,9 @@ function Trialsofretribution:OnItemPickedUp(keys)
   local player = PlayerResource:GetPlayer(keys.PlayerID)
   local itemname = keys.itemname
 end
+function Trialsofretribution:OnAllPlayersLoaded()
+     CustomUI:DynamicHud_SetVisible(-1, "loading screen", false)
+   end
 
 -- A player has reconnected to the game.  This function can be used to repaint Player-based particles or change
 -- state as necessary
@@ -890,9 +893,10 @@ function Trialsofretribution:OnConnectFull(keys)
   local entIndex = keys.index+1
   -- The Player entity of the joining user
   local ply = EntIndexToHScript(entIndex)
-  
+
   -- The Player ID of the joining player
   local playerID = ply:GetPlayerID()
+    CustomUI:DynamicHud_Create(-1, "loading screen", "file://{resources}/layout/custom_game/custom_loading_screen.xml", nil)
 end
 
 -- This function is called whenever illusions are created and tells you which was/is the original entity
