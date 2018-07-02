@@ -98,12 +98,26 @@ function Trialsofretribution:OnAllPlayersLoaded()
 end
 function heroselect()      
   EmitAnnouncerSound("announcer_announcer_now_select")
+    local start_after = 70
+      Timers:CreateTimer(start_after, function()
+        randomheroselect()
+    end)
 _G.reconnect1 = 1 
 _G.reconnect2 = 1 
 _G.reconnect3 = 1 
 _G.reconnect4 = 1 
 end
 
+function randomheroselect()
+
+  for i = 0,20 do
+local hero = HeroList:GetHero(i)
+if hero == nil then
+  local player = PlayerResource:GetPlayer(i)
+  player:MakeRandomHeroSelection()
+end
+end
+end
 --[[
   This function is called once and only once for every player when they spawn into the game for the first time.  It is also called
   if the player's hero is replaced with a new hero for any reason.  This function is useful for initializing heroes, such as adding
