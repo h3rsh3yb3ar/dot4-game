@@ -99,5 +99,6 @@ function Activate()
   GameRules:GetGameModeEntity():SetCameraDistanceOverride(1341)
   GameRules:GetGameModeEntity():SetDraftingBanningTimeOverride( 10 )
   GameRules:GetGameModeEntity():SetDraftingHeroPickSelectTimeOverride( 60 )
+  SetBotThinkingEnabled(true)
   
 end
