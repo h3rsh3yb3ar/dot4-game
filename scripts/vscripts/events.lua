@@ -189,6 +189,8 @@ function Trialsofretribution:OnNPCSpawned(keys)
   DebugPrintTable(keys)
 
   local npc = EntIndexToHScript(keys.entindex)
+
+
 end
 
 -- An entity somewhere has been hurt.  This event fires very often with many units so don't do too many expensive
@@ -823,10 +825,12 @@ local fow = Entities:FindByName( nil, "mid"):GetAbsOrigin()
       local heroes = HeroList:GetAllHeroes()
       for number,entity in pairs(heroes) do
       if(entity:GetTeam() == killedTeamNumber) then
-        
         entity:SetRespawnsDisabled(true)
-        entity:RemoveSelf()
-
+        entity:ForceKill(false)
+      end
+      if (entity:IsAlive() == false) then
+      entity:SetBuybackCooldownTime(999999)
+      entity:SetTimeUntilRespawn(99999) 
       end
     end
 
@@ -896,7 +900,7 @@ function Trialsofretribution:OnConnectFull(keys)
 
   -- The Player ID of the joining player
   local playerID = ply:GetPlayerID()
-    CustomUI:DynamicHud_Create(-1, "loading screen", "file://{resources}/layout/custom_game/custom_loading_screen.xml", nil)
+    
 end
 
 -- This function is called whenever illusions are created and tells you which was/is the original entity

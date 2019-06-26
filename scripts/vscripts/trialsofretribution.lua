@@ -225,7 +225,7 @@ local pteam = entity:GetTeam()
 if pteam == 6 then
 local player = entity:GetPlayerID()
 local gold = PlayerResource:GetGold(player)
-PlayerResource:SetGold( player, gold + 1.04, true )
+PlayerResource:SetGold( player, 1.04, true )
 end
 end
 end
@@ -236,7 +236,7 @@ local pteam = entity:GetTeam()
 if pteam == 7 then
 local player = entity:GetPlayerID()
 local gold = PlayerResource:GetGold(player)
-PlayerResource:SetGold( player, gold + 1.04, true )
+PlayerResource:SetGold( player, 1.04, true )
 end
 end
 end
@@ -247,7 +247,7 @@ local pteam = entity:GetTeam()
 if pteam == 8 then
 local player = entity:GetPlayerID()
 local gold = PlayerResource:GetGold(player)
-PlayerResource:SetGold( player, gold + 1.04, true )
+PlayerResource:SetGold( player, 1.04, true )
 end
 end
 end
@@ -258,7 +258,7 @@ local pteam = entity:GetTeam()
 if pteam == 9 then
 local player = entity:GetPlayerID()
 local gold = PlayerResource:GetGold(player)
-PlayerResource:SetGold( player, gold + 1.04, true )
+PlayerResource:SetGold( player, 1.04, true )
 end
 end
 end
