@@ -573,7 +573,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_building"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
 		"Model"						"models/props_structures/tower001.mdl"// Model.
 		"SoundSet"					"Tower.Fire"					// Name of sound set.
 		"MinimapIcon"					"minimap_tower90"
@@ -760,7 +760,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_building"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
 		"Model"						"models/props_structures/tower001.mdl"// Model.
 		"SoundSet"					"Tower.Fire"					// Name of sound set.
 		"MinimapIcon"					"minimap_tower90"
@@ -854,7 +854,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_building"			// Class of entity of link to.
+		"BaseClass"					"npc_dota_tower"			// Class of entity of link to.
 		"Model"						"models/props_structures/tower001.mdl"  // Model.
 		"SoundSet"					"Tower.Fire"				// Name of sound set.
 		"MinimapIcon"					"minimap_tower90"
@@ -947,7 +947,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_building"			// Class of entity of link to.
+		"BaseClass"					"npc_dota_tower"			// Class of entity of link to.
 		"Model"						"models/props_structures/tower001.mdl"	// Model.
 		"SoundSet"					"Tower.Fire"				// Name of sound set.
 		"MinimapIcon"					"minimap_tower45"
@@ -1040,7 +1040,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_building"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
 		"Model"						"models/props_structures/tower001.mdl"// Model.
 		"SoundSet"					"Tower.Fire"					// Name of sound set.
 		"MinimapIcon"					"minimap_tower90"
@@ -1133,7 +1133,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_building"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
 		"Model"						"models/props_structures/tower001.mdl"// Model.
 		"SoundSet"					"Tower.Fire"					// Name of sound set.
 		"MinimapIcon"					"minimap_tower90"
@@ -1226,7 +1226,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_building"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
 		"Model"						"models/props_structures/tower001.mdl"// Model.
 		"SoundSet"					"Tower.Fire"					// Name of sound set.
 		"MinimapIcon"					"minimap_tower45"
@@ -1319,7 +1319,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_building"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
 		"Model"						"models/props_structures/tower001.mdl"// Model.
 		"SoundSet"					"Tower.Fire"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
@@ -1412,7 +1412,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_building"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
 		"Model"						"models/props_structures/tower001.mdl"// Model.
 		"SoundSet"					"Tower.Fire"					// Name of sound set.
 		"MinimapIcon"					"minimap_tower45"
@@ -3122,7 +3122,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_building"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
 		"Model"						"models/props_structures/tower001.mdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"					"minimap_tower90"
@@ -3216,7 +3216,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_building"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
 		"Model"						"models/props_structures/tower001.mdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"					"minimap_tower45"
@@ -3309,7 +3309,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_building"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
 		"Model"						"models/props_structures/tower001.mdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"					"minimap_tower90"
@@ -3403,7 +3403,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_building"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
 		"Model"						"models/props_structures/tower001.mdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"					"minimap_tower90"
@@ -3496,7 +3496,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_building"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
 		"Model"						"models/props_structures/tower001.mdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"					"minimap_tower45"
@@ -3589,7 +3589,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_building"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
 		"Model"						"models/props_structures/tower001.mdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"					"minimap_tower90"
@@ -3683,7 +3683,7 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/props_structures/tower001.mdl"// Model.
+		"Model"						"models\props_structures\rock_golem\tower_radiant_rock_golem.vmdl_c"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"					"minimap_tower90"
 		"MinimapIconSize"				"320"
