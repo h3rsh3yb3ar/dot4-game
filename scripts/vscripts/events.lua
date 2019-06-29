@@ -174,7 +174,17 @@ function Trialsofretribution:OnGameRulesStateChange(keys)
         end
       end
     end
+    elseif newState == DOTA_GAMERULES_STATE_PRE_GAME then
+     
   elseif newState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
+     local point = Entities:FindByName( nil, "team_1_courier_spawn"):GetAbsOrigin()
+      local unit = CreateUnitByName("npc_dota_hero_mars", point, true, nil, nil, DOTA_TEAM_CUSTOM_1)
+            local point = Entities:FindByName( nil, "team_2_courier_spawn"):GetAbsOrigin()
+      local unit = CreateUnitByName("npc_dota_courier", point, true, nil, nil, DOTA_TEAM_CUSTOM_2)
+            local point = Entities:FindByName( nil, "team_3_courier_spawn"):GetAbsOrigin()
+      local unit = CreateUnitByName("npc_dota_courier", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
+            local point = Entities:FindByName( nil, "team_4_courier_spawn"):GetAbsOrigin()
+      local unit = CreateUnitByName("npc_dota_courier", point, true, nil, nil, DOTA_TEAM_CUSTOM_4)
     Trialsofretribution:OnGameInProgress()
   end
 
