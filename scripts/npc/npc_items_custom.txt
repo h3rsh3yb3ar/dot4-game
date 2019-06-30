@@ -1,6 +1,11 @@
 "DOTAAbilities"
 {
-
+"item_courier"
+{
+"ItemStockMax" "1"
+"ItemStockTime" "9999999"
+"ItemStockInitial" "0"
+}
 "item_ward_observer"
 	{
 		// General
