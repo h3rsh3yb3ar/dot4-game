@@ -150,6 +150,9 @@ end
   is useful for starting any game logic timers/thinkers, beginning the first round, etc.
 ]]
 function Trialsofretribution:OnGameInProgress()
+  local point = Entities:FindByName(nil,"nian_spawn"):GetAbsOrigin()
+  _G.nian_alive = true
+  CreateUnitByName("tor_custom_boss", point, true, nil, nil, DOTA_TEAM_NEUTRALS)
   local heroes = HeroList:GetAllHeroes()
   team_1_has_courier = false
   team_2_has_courier = false
@@ -174,6 +177,7 @@ end
 entity:AddItemByName("item_courier"):CastAbility()
 team_4_has_courier = true
 end
+
     end
 _G.heroteam1 = 0
 _G.heroteam2 = 0
@@ -368,10 +372,12 @@ function SpawnCreeps()
     if _G.midsnowrange == 1 then
     local unit = CreateUnitByName("npc_dota_creep_custom3_ranged", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
     unit:SetInitialGoalEntity( waypoint )
+
   end
       if _G.midsnowrange == 0 then
     local unit = CreateUnitByName("npc_dota_creep_custom2_ranged_upgraded_mega", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)
     unit:SetInitialGoalEntity( waypoint )
+
   end
   if midsnowmelee == 1 then
     local unit = CreateUnitByName("npc_dota_creep_custom3_melee", point, true, nil, nil, DOTA_TEAM_CUSTOM_3)

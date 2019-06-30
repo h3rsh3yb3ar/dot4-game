@@ -10769,5 +10769,128 @@
 		"EffectName"				"particles/dire_shrine_ambient_flares.vpcf"
 
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
-	}	
+	}
+"tor_custom_boss"
+	{
+		// General
+		//
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
+		"Model"						"models/creeps/nian/nian_creep.vmdl"	// Model.
+		"SoundSet"					"Creep_Bad_Range"					// Name of sound set.
+		"ModelScale" 					".9"
+		"Level"						"30"
+		"ConsideredHero"        "1"
+		
+		// Abilities
+		//----------------------------------------------------------------
+		
+		"Ability1"					"nian_root"			// Ability 1.
+		"Ability2"					""			// Ability 2.
+		"Ability3"					""			// Ability 3.
+		"Ability4"					""			// Ability 4.
+		"Ability5"					""			// Ability 5.
+		"Ability6"					""			// Ability 6 - Extra.
+		"Ability7"					""			// Ability 7 - Extra.
+		"Ability8"					""			// Ability 8 - Extra.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"					"20"			// Physical protection.
+		"MagicalResistance"				"55"			// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"			"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"75"		// Damage range min.
+		"AttackDamageMax"			"85"		// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.25"			// Speed of attack.
+		"AttackAnimationPoint"			"0.5"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"		"200"		// Range within a target can be acquired.
+		"AttackRange"				"175"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/neutral_fx/black_dragon_fireball_projectile.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"900"		// Speed of projectile.
+
+		// Attributes
+		//----------------------------------------------------------------
+		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"0"			// Base strength
+		"AttributeStrengthGain"		"0"			// Strength bonus per level.
+		"AttributeBaseIntelligence"	"0"			// Base intelligence
+		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
+		"AttributeBaseAgility"		"0"			// Base agility
+		"AttributeAgilityGain"		"0"			// Agility bonus per level.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"1500"		// Experience earn.
+		"BountyGoldMin"				"500"		// Gold earned min.
+		"BountyGoldMax"				"700"		// Gold earned max.
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"			// Hull type used for navigation/locomotion.
+		"RingRadius"				"45"
+		"HealthBarOffset"			"150"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
+		"MovementSpeed"				"320"		// Speed
+		"MovementTurnRate"			"0.5"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"6000"		// Base health.
+		"StatusHealthRegen"			"30"			// Health regeneration rate.
+		"StatusMana"				"500"		// Base mana.
+		"StatusManaRegen"			"1.75"		// Mana regeneration rate.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_CUSTOM_1"			// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"850"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+		
+		//Inventory
+		"HasInventory"				"1"
+        "Creature"
+    {
+        "DefaultState"       "Invade"
+    "States"
+    {
+    "Invade"
+        {
+        "Name"          "Defend"
+        "Aggression"    "90.0"
+        "Avoidance"     "20.0"
+        "Support"       "40.0"
+        "RoamDistance"  "300.0"
+        }
+        }
+        "OffensiveAbilities"
+{
+
+        "Ability1"
+    {
+        "Name"              "nian_root"
+        "damage" "1"
+    }
+
+
+    
+}
+		
+	}		
+}
+"npc_dota_courier"
+{
+"MovementSpeed"				"425"
+}
 }

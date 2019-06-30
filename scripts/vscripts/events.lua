@@ -491,6 +491,13 @@ function Trialsofretribution:_OnEntityKilled( keys )
           if killedUnit:GetName() == "snowbotmelee" then
           _G.snowbotmelee = 0
           end
+          if killedUnit:GetName() == "radianttopmelee" then
+            _G.nian_alive = false
+            local start_after = RandomInt(350, 450)
+      Timers:CreateTimer(start_after, function()
+        nian_respawn()
+    end)
+           end
           
           
           
@@ -534,6 +541,11 @@ function Trialsofretribution:_OnEntityKilled( keys )
   end
 end
 
+function nian_respawn()
+  local point = Entities:FindByName("nian_spawn"):GetAbsOrigin()
+  _G.nian_alive = true
+  CreateUnitByName("tor_custom_boss", point, true, nil, nil, DOTA_TEAM_NEUTRALS)
+end
 function Trialsofretribution:OnCourierKilled ( keys )
 	local killedUnit = EntIndexToHScript( keys.entindex_killed )
 	local killedTeam = killedUnit:GetTeamNumber()
@@ -831,7 +843,7 @@ local fow = Entities:FindByName( nil, "mid"):GetAbsOrigin()
         entity:SetRespawnsDisabled(true)
         entity:ForceKill(false)
       end
-      if (entity:IsAlive() == false) then
+      if (entity:IsAlive() == false and entity:GetTeam() == killedTeamNumber) then
       entity:SetBuybackCooldownTime(999999)
       entity:SetTimeUntilRespawn(99999) 
       end

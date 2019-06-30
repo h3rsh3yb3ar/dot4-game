@@ -778,8 +778,6 @@
 
   }
 
-
-}
 "dummy_passive_fly"
 {
 	"BaseClass" 		"ability_datadriven"
