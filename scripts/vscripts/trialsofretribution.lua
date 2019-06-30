@@ -102,10 +102,6 @@ function heroselect()
       Timers:CreateTimer(start_after, function()
         randomheroselect()
     end)
-        team_1_has_courier = false
-  team_2_has_courier = false
-  team_3_has_courier = false
-  team_4_has_courier = false
 _G.reconnect1 = 1 
 _G.reconnect2 = 1 
 _G.reconnect3 = 1 
@@ -132,28 +128,7 @@ end
 ]]
 function Trialsofretribution:OnHeroInGame(hero)
   DebugPrint("[BAREBONES] Hero spawned in game for first time -- " .. hero:GetUnitName())
- local heroes = HeroList:GetAllHeroes()
-
-  for number,entity in pairs(heroes) do 
-    player_num = entity:GetPlayerID()
-    player_team = entity:GetTeam()
-    if team_1_has_courier == false and player_team == 6 then
-entity:AddItemByName("item_courier"):CastAbility()
-team_1_has_courier = true
-end
-    if team_2_has_courier == false and player_team == 7 then
-entity:AddItemByName("item_courier"):CastAbility()
-team_2_has_courier = true
-end
-    if team_3_has_courier == false and player_team == 8 then
-entity:AddItemByName("item_courier"):CastAbility()
-team_3_has_courier = true
-end
-    if team_4_has_courier == false and player_team == 9 then
-entity:AddItemByName("item_courier"):CastAbility()
-team_4_has_courier = true
-end
-    end
+ 
 
   -- This line for example will set the starting gold of every hero to 500 unreliable gold
   --hero:SetGold(500, false)
@@ -175,7 +150,31 @@ end
   is useful for starting any game logic timers/thinkers, beginning the first round, etc.
 ]]
 function Trialsofretribution:OnGameInProgress()
-  
+  local heroes = HeroList:GetAllHeroes()
+  team_1_has_courier = false
+  team_2_has_courier = false
+  team_3_has_courier = false
+  team_4_has_courier = false
+  for number,entity in pairs(heroes) do 
+    player_num = entity:GetPlayerID()
+    player_team = entity:GetTeam()
+    if team_1_has_courier == false and player_team == 6 then
+entity:AddItemByName("item_courier"):CastAbility()
+team_1_has_courier = true
+end
+    if team_2_has_courier == false and player_team == 7 then
+entity:AddItemByName("item_courier"):CastAbility()
+team_2_has_courier = true
+end
+    if team_3_has_courier == false and player_team == 8 then
+entity:AddItemByName("item_courier"):CastAbility()
+team_3_has_courier = true
+end
+    if team_4_has_courier == false and player_team == 9 then
+entity:AddItemByName("item_courier"):CastAbility()
+team_4_has_courier = true
+end
+    end
 _G.heroteam1 = 0
 _G.heroteam2 = 0
 _G.heroteam3 = 0
