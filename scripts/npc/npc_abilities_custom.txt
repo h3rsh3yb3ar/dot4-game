@@ -777,6 +777,7 @@
     }
 
   }
+  }
 
 "dummy_passive_fly"
 {
@@ -838,7 +839,142 @@
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}
+"nian_root"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"ember_spirit_searing_chains"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"400"
+	"AbilityCastPoint"				"0"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"14.0 12.0 10.0 8.0"
 
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"110"
 
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"duration"						"1.0 2.0 2.0 3.0"
+		}
+		
+		"02"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"radius"						"400"
+		}	
+		
+		"03"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"chains_damage"					"80 60 120 300"
+		}				
+		"04"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"total_damage_tooltip"			"80 120 240 700"
+		}
+		"05"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"tick_interval"					"1.0"
+		}
+		"06"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"unit_count"					"2"
+		}
+						
+	}
+	
+	// Data driven
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"							"soundevents/game_sounds_heroes/game_sounds_ember_spirit.vsndevts"
+		"particle"							"particles/units/heroes/hero_ember_spirit/ember_spirit_searing_chains_cast.vpcf"
+		"particle"							"particles/units/heroes/hero_ember_spirit/ember_spirit_searing_chains_debuff.vpcf"
+		"particle"							"particles/units/heroes/hero_ember_spirit/ember_spirit_searing_chains_start.vpcf"
+	}
+	
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"Target"						"CASTER"
+			"EffectName"					"Hero_EmberSpirit.SearingChains.Cast"
+		}
+	
+		"FireEffect"
+		{
+			"Target"						"CASTER"
+			"EffectName"					"particles/units/heroes/hero_ember_spirit/ember_spirit_searing_chains_cast.vpcf"
+			"EffectAttachType"				"follow_origin"
+			"ControlPoints"
+			{
+				"01"						"%radius 0 0"
+			}
+		}
+	
+		"RunScript"
+		{
+			"ScriptFile"					"heroes/nian_boss/nian_root.lua"
+			"Function"						"searing_chains_pin_point"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_searing_chains_debuff_datadriven"
+		{
+			"IsDebuff"						"1"
+		
+			"Duration"						"%duration"
+			
+			"EffectName"					"particles/units/heroes/hero_ember_spirit/ember_spirit_searing_chains_debuff.vpcf"
+			"EffectAttachType"				"follow_origin"
+			
+			"OnCreated"
+			{
+				"FireSound"
+				{
+					"Target"				"TARGET"
+					"EffectName"			"Hero_EmberSpirit.SearingChains.Target"
+				}
+			}
+			
+			"ThinkInterval"					"%tick_interval"
+			"OnIntervalThink"
+			{
+				"Damage"
+				{
+					"Target"				"TARGET"
+					"Damage"				"%chains_damage"
+					"Type"					"DAMAGE_TYPE_MAGICAL"
+				}
+			}
+		
+			"States"
+			{
+				"MODIFIER_STATE_ROOTED"		"MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+	}
+}
 }
  

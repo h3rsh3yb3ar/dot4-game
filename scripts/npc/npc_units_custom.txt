@@ -10867,7 +10867,7 @@
     {
     "Invade"
         {
-        "Name"          "Defend"
+        "Name"          "Invade"
         "Aggression"    "90.0"
         "Avoidance"     "20.0"
         "Support"       "40.0"
@@ -10891,6 +10891,6 @@
 }
 "npc_dota_courier"
 {
-"MovementSpeed"				"425"
+"MovementSpeed"				"745"
 }
 }
