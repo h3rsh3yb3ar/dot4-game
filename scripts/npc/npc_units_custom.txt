@@ -10780,6 +10780,7 @@
 		"ModelScale" 					".9"
 		"Level"						"30"
 		"ConsideredHero"        "1"
+		"UseNeutralCreepBehavior"   "1"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -10869,7 +10870,7 @@
         {
         "Name"          "Invade"
         "Aggression"    "90.0"
-        "Avoidance"     "20.0"
+        "Avoidance"     "0.0"
         "Support"       "40.0"
         "RoamDistance"  "300.0"
         }
