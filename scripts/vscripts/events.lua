@@ -859,7 +859,7 @@ local fow = Entities:FindByName( nil, "mid"):GetAbsOrigin()
 
 
 function Trialsofretribution:endgame(keys)
-local heroes = HeroList:GetAllHeroes()
+local heroes = Entities:FindAllByClassname("npc_dota_fort") 
 for number,entity in pairs(heroes) do
 local winner = entity:GetTeam()
 if winner ~= _G.deadteam then
