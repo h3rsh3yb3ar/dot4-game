@@ -41,7 +41,7 @@ function Trialsofretribution:OnDisconnect(keys)
 
     if team == 8 then
       _G.reconnect3 = 0
-     local start_after = 300 -- Start this timer *start_after* game-time seconds later
+     local start_after = 310 -- Start this timer *start_after* game-time seconds later
     print ("Timer is running")
   EmitAnnouncerSound("announcer_announcer_welcome_07")
     Timers:CreateTimer(start_after, function()
@@ -159,7 +159,7 @@ function Trialsofretribution:OnGameRulesStateChange(keys)
   if newState == DOTA_GAMERULES_STATE_WAIT_FOR_PLAYERS_TO_LOAD then
     self.bSeenWaitForPlayers = true
   elseif newState == DOTA_GAMERULES_STATE_INIT then
-    --Timers:RemoveTimer("alljointimer")
+    Timers:RemoveTimer("alljointimer")
   elseif newState == DOTA_GAMERULES_STATE_HERO_SELECTION then
     
 
@@ -233,7 +233,7 @@ function Trialsofretribution:OnItemPickedUp(keys)
   local itemname = keys.itemname
 end
 function Trialsofretribution:OnAllPlayersLoaded()
-     CustomUI:DynamicHud_SetVisible(-1, "loading screen", false)
+     CustomUI:DynamicHud_SetVisible(-1, "gamemode.png", false)
    end
 
 -- A player has reconnected to the game.  This function can be used to repaint Player-based particles or change
@@ -570,9 +570,15 @@ end
 function Trialsofretribution:OnCreatureKilled( keys )
 	local killedUnit = EntIndexToHScript( keys.entindex_killed )
 	local creature_name = killedUnit:GetName()
+  local killer = EntIndexToHScript( keys.entindex_attacker )
+  local killing_team = killer:GetTeamNumber()
 	print(killedUnit:GetName())
-		if(creature_name == "npc_dota_creature") then EmitAnnouncerSound("announcer_announcer_beast_slain_01")
+		if(creature_name == "npc_dota_creature") then EmitAnnouncerSound("announcer_ann_custom_generic_alert_36")
 	print("unit is norva")
+  if(killing_team == 6) then  GameRules:SendCustomMessage("<font color='#FF8000'>Orange Dragons </font> Have Slain The Beast!", 0, 0)end
+  if(killing_team == 7) then  GameRules:SendCustomMessage("<<font color='#F7FF00'>Yellow Wolves </font> Have Slain The Beast!", 0, 0)end
+  if(killing_team == 8) then  GameRules:SendCustomMessage("<font color='#FF6EFB'>Pink Chickens </font> Have Slain The Beast!", 0, 0)end
+  if(killing_team == 9) then  GameRules:SendCustomMessage("<font color='#00FFFF'>Blue Phoenix </font> Have Slain The Beast!", 0, 0)end
 else
 	end
 end
@@ -864,19 +870,15 @@ for number,entity in pairs(heroes) do
 local winner = entity:GetTeam()
 if winner ~= _G.deadteam then
   if winner == 6 then
-  GameRules:SetCustomVictoryMessage( "Red Team Victory!" )
   EmitAnnouncerSound ("announcer_ann_custom_victory_13")
 end
   if winner == 7 then
-  GameRules:SetCustomVictoryMessage( "Yellow Team Victory!" )
   EmitAnnouncerSound ("announcer_ann_custom_victory_02")
 end
   if winner == 8 then
-  GameRules:SetCustomVictoryMessage( "Green Team Victory!" )
   EmitAnnouncerSound ("announcer_ann_custom_victory_10")
 end
   if winner == 9 then
-  GameRules:SetCustomVictoryMessage( "Blue Team Victory!" )
   EmitAnnouncerSound ("announcer_ann_custom_victory_06")
 end
 GameRules:SetGameWinner(winner)

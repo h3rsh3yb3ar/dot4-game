@@ -90,7 +90,7 @@ end
 function Trialsofretribution:OnAllPlayersLoaded()
   DebugPrint("[TRIALSOFRETRIBUTION] All Players have loaded into the game")
   EmitAnnouncerSound("announcer_announcer_ban_yr")
-  local start_after = 10
+  local start_after = 15
       Timers:CreateTimer(start_after, function()
         heroselect()
     end)
@@ -98,7 +98,7 @@ function Trialsofretribution:OnAllPlayersLoaded()
 end
 function heroselect()      
   EmitAnnouncerSound("announcer_announcer_now_select")
-    local start_after = 70
+    local start_after = 80
       Timers:CreateTimer(start_after, function()
         randomheroselect()
     end)
