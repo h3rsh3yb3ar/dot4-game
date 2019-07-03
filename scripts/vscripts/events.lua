@@ -601,42 +601,42 @@ function Trialsofretribution:OnCustomTowerKilled( keys )
     end
    if killer:GetTeam() ~= killedunitteam then
     if(tower_name == "radiantbot1" or tower_name == "radiantbot2" or tower_name == "radiantbot3" or tower_name == "radiantmid1" or tower_name == "radiantmid2" or tower_name == "radiantmid3" or tower_name == "radianttop1" or tower_name == "radianttop2" or tower_name == "radianttop3" or tower_name == "radiantmid4" or tower_name == "radiantmid4") then
-EmitAnnouncerSound("announcer_ann_custom_tower_fall_10") end end
+EmitAnnouncerSound("announcer_ann_custom_tower_fall_03") end end
 
 ---------------------------------------------------- Radiant Tower Text Alerts -----------------------------------------------------------------------------------------------------------------
     if tower_name == "radiantbot1" then
-       GameRules:SendCustomMessage("<font color='#008000'>Green's Top Tower </font> Has Fallen!", 0, 0)
+       GameRules:SendCustomMessage("<font color='#FF6EFB'>Pink's Top Tower </font> Has Fallen!", 0, 0)
     end
     if tower_name == "radiantbot2" then
-       GameRules:SendCustomMessage("<font color='#008000'>Green's Tier 2 Top Tower</font> Has Fallen!", 0, 0)
+       GameRules:SendCustomMessage("<font color='#FF6EFB'>Pink's Tier 2 Top Tower</font> Has Fallen!", 0, 0)
     end
     if tower_name == "radiantbot3" then
-       GameRules:SendCustomMessage("<font color='#008000'>Green's Tier 3 Top tower</font> Has Fallen!", 0, 0)
+       GameRules:SendCustomMessage("<font color='#FF6EFB'>Pink's Tier 3 Top tower</font> Has Fallen!", 0, 0)
     end
     if tower_name == "radiantmid1" then
-       GameRules:SendCustomMessage("<font color='#008000'>Green's Middle Tower </font> Has Fallen!", 0, 0)
+       GameRules:SendCustomMessage("<font color='#FF6EFB'>Pink's Middle Tower </font> Has Fallen!", 0, 0)
     end
     if tower_name == "radiantmid2" then
-       GameRules:SendCustomMessage("<font color='#008000'>Green's Tier 2 Middle Tower </font> Has Fallen!", 0, 0)
+       GameRules:SendCustomMessage("<font color='#FF6EFB'>Pink's Tier 2 Middle Tower </font> Has Fallen!", 0, 0)
     end
     if tower_name == "radiantmid3" then
-       GameRules:SendCustomMessage("<font color='#008000'>Green's Tier 3 Middle Tower </font> Has Fallen!", 0, 0)
+       GameRules:SendCustomMessage("<font color='#FF6EFB'>Pink's Tier 3 Middle Tower </font> Has Fallen!", 0, 0)
     end
       if tower_name == "radianttop1" then
-       GameRules:SendCustomMessage("<font color='#008000'>Green's Bottom Tower </font> Has Fallen!", 0, 0)
+       GameRules:SendCustomMessage("<font color='#FF6EFB'>Pink's Bottom Tower </font> Has Fallen!", 0, 0)
     end
     if tower_name == "radianttop2" then
-       GameRules:SendCustomMessage("<font color='#008000'>Green's Tier 2 Bottom Tower</font> Has Fallen!", 0, 0)
+       GameRules:SendCustomMessage("<font color='#FF6EFB'>Pink's Tier 2 Bottom Tower</font> Has Fallen!", 0, 0)
     end
     if tower_name == "radianttop3" then
-       GameRules:SendCustomMessage("<font color='#008000'>Green's Tier 3 Bottom tower</font> Has Fallen!", 0, 0)
+       GameRules:SendCustomMessage("<font color='#FF6EFB'>Pink's Tier 3 Bottom tower</font> Has Fallen!", 0, 0)
     end
     if tower_name == "radiantmid4" then
-       GameRules:SendCustomMessage("<font color='#008000'>Green's Tier 4 tower</font> Has Fallen!", 0, 0)
+       GameRules:SendCustomMessage("<font color='#FF6EFB'>Pink's Tier 4 tower</font> Has Fallen!", 0, 0)
     end
 if killer:GetTeam() ~= killedunitteam then
     if(tower_name == "direbot1" or tower_name == "direbot2" or tower_name == "direbot3" or tower_name == "diremid1" or tower_name == "diremid2" or tower_name == "diremid3" or tower_name == "diretop1" or tower_name == "diretop2" or tower_name == "diretop3" or tower_name == "diretop4" or tower_name == "direbot4") then
-EmitAnnouncerSound("announcer_ann_custom_tower_fall_06")end end
+EmitAnnouncerSound("announcer_ann_custom_tower_deny_03")end end
 ---------------------------------------------------- Dire Tower Text Alerts ----------------------------------------------------------------------------------------------------------------------
 
     if tower_name == "direbot1" then
@@ -679,39 +679,39 @@ if killer:GetTeam() ~= killedunitteam then
 EmitAnnouncerSound("announcer_ann_custom_tower_fall_02")end end
 
     if tower_name == "snowbot1" then
-       GameRules:SendCustomMessage("<font color='#ff0000'>Red's Top Tower </font> Has Fallen!", 0, 0)
+       GameRules:SendCustomMessage("<font color='#FF8000'>Orange's Top Tower </font> Has Fallen!", 0, 0)
     end
     if tower_name == "snowbot2" then
-       GameRules:SendCustomMessage("<font color='#ff0000'>Red's Tier 2 Top Tower</font> Has Fallen!", 0, 0)
+       GameRules:SendCustomMessage("<font color='#FF8000'>Orange's Tier 2 Top Tower</font> Has Fallen!", 0, 0)
     end
     if tower_name == "snowbot3" then
-       GameRules:SendCustomMessage("<font color='#ff0000'>Red's Tier 3 Top Tower</font> Has Fallen!", 0, 0)
+       GameRules:SendCustomMessage("<font color='#FF8000'>Orange's Tier 3 Top Tower</font> Has Fallen!", 0, 0)
     end
     if tower_name == "snowmid1" then
-       GameRules:SendCustomMessage("<font color='#ff0000'>Red's Middle Tower </font> Has Fallen!", 0, 0)
+       GameRules:SendCustomMessage("<font color='#FF8000'>Orange's Middle Tower </font> Has Fallen!", 0, 0)
     end
     if tower_name == "snowmid2" then
-       GameRules:SendCustomMessage("<font color='#ff0000'>Red's Tier 2 Middle Tower </font> Has Fallen!", 0, 0)
+       GameRules:SendCustomMessage("<font color='#FF8000'>Orange's Tier 2 Middle Tower </font> Has Fallen!", 0, 0)
     end
     if tower_name == "snowmid3" then
-       GameRules:SendCustomMessage("<font color='#ff0000'>Red's Tier 3 Middle Tower </font> Has Fallen!", 0, 0)
+       GameRules:SendCustomMessage("<font color='#FF8000'>Oranges's Tier 3 Middle Tower </font> Has Fallen!", 0, 0)
     end
     if tower_name == "snowtop1" then
-       GameRules:SendCustomMessage("<font color='#ff0000'>Red's Bottom Tower </font> Has Fallen!", 0, 0)
+       GameRules:SendCustomMessage("<font color='#FF8000'>Oranges's Bottom Tower </font> Has Fallen!", 0, 0)
     end
     if tower_name == "snowtop2" then
-       GameRules:SendCustomMessage("<font color='#ff0000'>Red's Tier 2 Bottom Tower</font> Has Fallen!", 0, 0)
+       GameRules:SendCustomMessage("<font color='#FF8000'>Oranges's Tier 2 Bottom Tower</font> Has Fallen!", 0, 0)
     end
     if tower_name == "snowtop3" then
-       GameRules:SendCustomMessage("<font color='#ff0000'>Red's Tier 3 Bottom Tower</font> Has Fallen!", 0, 0)
+       GameRules:SendCustomMessage("<font color='#FF8000'>Oranges's Tier 3 Bottom Tower</font> Has Fallen!", 0, 0)
     end
     if tower_name == "snowmid4" then
-       GameRules:SendCustomMessage("<font color='#ff0000'>Red's Tier 4 Tower</font> Has Fallen!", 0, 0)
+       GameRules:SendCustomMessage("<font color='#FF8000'>Oranges's Tier 4 Tower</font> Has Fallen!", 0, 0)
     end
 
 	      if(tower_name == "snowbot1" or tower_name == "snowbot2" or tower_name == "snowbot3" or tower_name == "snowmid1" or tower_name == "snowmid2" or tower_name == "snowmid3" or tower_name == "snowtop1" or tower_name == "snowtop2" or tower_name == "snowtop3" or tower_name == "snowtop4" or tower_name == "snowbot4") then
  if killer:GetTeam() ~= killedunitteam then
-EmitAnnouncerSound("announcer_ann_custom_tower_fall_13")end end
+EmitAnnouncerSound("announcer_ann_custom_tower_fall_04")end end
 ---------------------------------------------Yellow Tower Text Alerts---------------------------------------------------------------------------------------------------------------------------------------------
  
      if tower_name == "fallbot1" then
@@ -767,7 +767,7 @@ EmitAnnouncerSound("announcer_ann_custom_tower_fall_13")end end
 	if killer:GetTeam() == killedUnit:GetTeam() then
      if(tower_name == "radiantbot1" or tower_name == "radiantbot2" or tower_name == "radiantbot3" or tower_name == "radiantmid1" or tower_name == "radiantmid2" or tower_name == "radiantmid3" or tower_name == "radianttop1" or tower_name == "radianttop2" or tower_name == "radianttop3" or tower_name == "radianttop4" or tower_name == "radiantbot4") then
  
-EmitAnnouncerSound("announcer_ann_custom_tower_deny_10") end
+EmitAnnouncerSound("announcer_ann_custom_tower_deny_03") end
  
     if(tower_name == "direbot1" or tower_name == "direbot2" or tower_name == "direbot3" or tower_name == "diremid1" or tower_name == "diremid2" or tower_name == "diremid3" or tower_name == "diretop1" or tower_name == "diretop2" or tower_name == "diretop3" or tower_name == "diretop4" or tower_name == "direbot4") then
  
@@ -779,7 +779,7 @@ EmitAnnouncerSound("announcer_ann_custom_tower_deny_02")end
  
     if(tower_name == "snowbot1" or tower_name == "snowbot2" or tower_name == "snowbot3" or tower_name == "snowmid1" or tower_name == "snowmid2" or tower_name == "snowmid3" or tower_name == "snowtop1" or tower_name == "snowtop2" or tower_name == "snowtop3" or tower_name == "snowtop4" or tower_name == "snowbot4") then
  
-EmitAnnouncerSound("announcer_ann_custom_tower_deny_13")end
+EmitAnnouncerSound("announcer_ann_custom_tower_deny_04")end
  
 		--Loop through each of the four teams
 		for i=6,9,1 do
@@ -810,7 +810,7 @@ function Trialsofretribution:OnFortKilled( keys )
   local deadAncient = EntIndexToHScript(keys.entindex_killed )
   local killedTeamNumber = deadAncient:GetTeamNumber()
   _G.fortsalive = _G.fortsalive - 1
-if(killedTeamNumber == 6 and _G.fortsalive ~= 1) then EmitAnnouncerSound("announcer_ann_custom_defeated_13")end -- red
+if(killedTeamNumber == 6 and _G.fortsalive ~= 1) then EmitAnnouncerSound("announcer_ann_custom_defeated_04")end -- red
 
 if KilledTeamNumber == 6 then
   GameRules:SendCustomMessage("<font color='#008000'>  Green Has been </font> <font color='#FF0000'>Eliminated!</font>", 0, 0) end
@@ -820,7 +820,7 @@ if KilledTeamNumber == 6 then
 if KilledTeamNumber == 7 then
    GameRules:SendCustomMessage("<font color='#FFFF00'> Yellow </font> Has Been <font color='#FF0000'>Eliminated!</font>", 0, 0) end
  
-  if(killedTeamNumber == 8 and _G.fortsalive ~= 1) then EmitAnnouncerSound("announcer_ann_custom_defeated_10")end -- Green
+  if(killedTeamNumber == 8 and _G.fortsalive ~= 1) then EmitAnnouncerSound("announcer_ann_custom_defeated_03")end -- Green
  
   if(killedTeamNumber == 9 and _G.fortsalive ~= 1) then EmitAnnouncerSound("announcer_ann_custom_defeated_06")end -- Blue
  
@@ -870,13 +870,13 @@ for number,entity in pairs(heroes) do
 local winner = entity:GetTeam()
 if winner ~= _G.deadteam then
   if winner == 6 then
-  EmitAnnouncerSound ("announcer_ann_custom_victory_13")
+  EmitAnnouncerSound ("announcer_ann_custom_victory_04")
 end
   if winner == 7 then
   EmitAnnouncerSound ("announcer_ann_custom_victory_02")
 end
   if winner == 8 then
-  EmitAnnouncerSound ("announcer_ann_custom_victory_10")
+  EmitAnnouncerSound ("announcer_ann_custom_victory_03")
 end
   if winner == 9 then
   EmitAnnouncerSound ("announcer_ann_custom_victory_06")
