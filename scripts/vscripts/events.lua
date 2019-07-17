@@ -849,11 +849,13 @@ local fow = Entities:FindByName( nil, "mid"):GetAbsOrigin()
         entity:SetRespawnsDisabled(true)
         entity:ForceKill(false)
       end
+
       if (entity:IsAlive() == false and entity:GetTeam() == killedTeamNumber) then
       entity:SetBuybackCooldownTime(999999)
       entity:SetTimeUntilRespawn(99999) 
       end
     end
+
 
     if _G.fortsalive == 1 then
       _G.deadteam = killedTeamNumber
