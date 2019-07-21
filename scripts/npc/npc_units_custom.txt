@@ -10786,7 +10786,7 @@
 		//----------------------------------------------------------------
 		
 		"Ability1"					"nian_root"			// Ability 1.
-		"Ability2"					""			// Ability 2.
+		"Ability2"					"boss_refraction"			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
@@ -10882,6 +10882,11 @@
     {
         "Name"              "nian_root"
         "damage" "1"
+    }
+        "Ability1"
+    {
+        "Name"              "boss_refraction"
+        "damage" "0"
     }
 
 

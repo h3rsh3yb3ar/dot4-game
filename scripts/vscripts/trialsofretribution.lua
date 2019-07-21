@@ -363,7 +363,7 @@ _G.fortsalive = 4
 
 
 function SpawnCreeps()
-  Gamerules:SendCustomMessage("Creeps have spawned!", -1, 1)
+  --Gamerules:SendCustomMessage("Creeps have spawned!", -1, 1)
 
     
     

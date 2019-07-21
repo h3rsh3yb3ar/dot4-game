@@ -493,10 +493,7 @@ function Trialsofretribution:_OnEntityKilled( keys )
           end
           if killedUnit:GetName() == "radianttopmelee" then
             _G.nian_alive = false
-            local start_after = RandomInt(350, 450)
-      Timers:CreateTimer(start_after, function()
-        nian_respawn()
-    end)
+
            end
           
           
@@ -541,11 +538,7 @@ function Trialsofretribution:_OnEntityKilled( keys )
   end
 end
 
-function nian_respawn()
-  local point = Entities:FindByName("nian_spawn"):GetAbsOrigin()
-  _G.nian_alive = true
-  CreateUnitByName("tor_custom_boss", point, true, nil, nil, DOTA_TEAM_NEUTRALS)
-end
+
 function Trialsofretribution:OnCourierKilled ( keys )
 	local killedUnit = EntIndexToHScript( keys.entindex_killed )
 	local killedTeam = killedUnit:GetTeamNumber()
@@ -575,6 +568,11 @@ function Trialsofretribution:OnCreatureKilled( keys )
 	print(killedUnit:GetName())
 		if(creature_name == "npc_dota_creature") then EmitAnnouncerSound("announcer_ann_custom_generic_alert_36")
 	print("unit is norva")
+              local start_after = RandomInt(350, 450)
+      Timers:CreateTimer(start_after, function()
+        Trialsofretribution:nian_respawn()
+    end)
+
   if(killing_team == 6) then  GameRules:SendCustomMessage("<font color='#FF8000'>Orange Dragons </font> Have Slain The Beast!", 0, 0)end
   if(killing_team == 7) then  GameRules:SendCustomMessage("<<font color='#F7FF00'>Yellow Wolves </font> Have Slain The Beast!", 0, 0)end
   if(killing_team == 8) then  GameRules:SendCustomMessage("<font color='#FF6EFB'>Pink Chickens </font> Have Slain The Beast!", 0, 0)end
@@ -583,6 +581,11 @@ else
 	end
 end
 
+function Trialsofretribution:nian_respawn()
+  local point = Entities:FindByName(nil, "nian_spawn"):GetAbsOrigin()
+  _G.nian_alive = true
+  CreateUnitByName("tor_custom_boss", point, true, nil, nil, DOTA_TEAM_NEUTRALS)
+end
 
 function Trialsofretribution:OnCustomTowerKilled( keys )
     local killer = EntIndexToHScript( keys.entindex_attacker )
